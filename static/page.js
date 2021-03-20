@@ -141,9 +141,9 @@ module.exports = function (req, res, url) {
 				}
 			}
 		</script>
-		<link rel="stylesheet" type="text/css" href="/pages/css/modern-normalize.css">
-		<link rel="stylesheet" type="text/css" href="/pages/css/global.css">
-		<style>
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400,700">
+                <link rel="stylesheet" href="/html/themelist/themelistfiles/common_combined.css.gz.css">
+                <link rel="stylesheet" href="/html/themelist/themelistfiles/videomaker.css.gz.css"><style>
 			body {
 				background: #eee;
 			}
