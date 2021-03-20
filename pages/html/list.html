@@ -617,48 +617,10 @@
     </div>
 </nav>
 <!-- END OF HEADER -->
-	<div class="free-trial-banner">
-    <span class="glyph-pro glyph-warning-sign"></span>
+	<div class="warning">
     Welcome to GoAnimate for Schools, version 1.1.2! Feel free to make any video that you desire. Contact Joseph The Animator, the lead developer for any assistance. However, don't put this on EvenNode (or something similar) or you may be hit with a DMCA complaint from Vyond.</div>
-<script>
-    (function(){
-        // Log last upsell date.
-        $('.free-trial-banner a[href$=\"pricing\"]').click(function(){
-            SetCookie('last_upsell_date', moment().format('MM/DD/YYYY'));
-        });
-    }());
-</script>
-
-<div class="my-video-container">
-<script src="https://fast.wistia.com/embed/medias/70x3iky0kr.jsonp" async=""></script>
-<script src="https://fast.wistia.com/assets/external/E-v1.js" async=""></script>
-<script>
-window._wq = window._wq || [];
-_wq.push({ id: '70x3iky0kr', onReady: function(video) {
-    video.bind('play', function() {
-        amplitudeTrackEvent(AMPLITUDE_EVENT.VM5_START_IN_APP_VIDEO, {
-            page_url: window.location.href,
-            wistia_id: '70x3iky0kr',
-            message: 'Make Videos Faster'
-        });
-
-        return video.unbind;
-    })
-}});
-</script>
-
-
-
-<div class="container">
-    <div class="page-header">
-        <h1 class="h2">
-            <ol class="breadcrumb video-breadcrumb">
-                
-            </ol>
-        </h1>
-    </div>
-
-    <table>
+</header>
+	<table>
 		<thead>
 			<tr>
 				<td></td>
@@ -670,14 +632,95 @@ _wq.push({ id: '70x3iky0kr', onReady: function(video) {
 		<tbody></tbody>
 		<tfoot>
 			<tr>
-				<td colspan="127"><a id="load_more" href="javascript:;">LOAD MORE...</a></td>
+				<td colspan="127"><a id="load_more" href="javascript:;">Load more of your videos...</a></td>
 			</tr>
 		</tfoot>
 	</table>
-	<form enctype="multipart/form-data" action="/upload_movie" method="post">
-		<input id="file" type="file" onchange="this.form.submit()" name="import" accept=".xml">
+	<footer class="site-footer hidden-print">
+    <div class="container">
+        <div class="row site-footer-nav">
+            <div class="col-sm-3">
+                <div class="site-footer-nav-col">
+                    <h5>About GoAnimate</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://web.archive.org/web/20181004174617/https://goanimate.com/about">Who We Are</a></li>
+                        <li><a href="https://web.archive.org/web/20181004174617/https://goanimate.com/contactus">Contact Us</a></li>
+                        <li><a href="https://web.archive.org/web/20181004174617/https://goanimate.com/video-maker-tips">Blog</a></li>
+                        <li><a href="https://web.archive.org/web/20181004174617/https://press.goanimate.com/">Press</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="site-footer-nav-col">
+                    <h5>GoAnimate Solutions</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://web.archive.org/web/20181004174617/https://goanimate4schools.com/" target="_blank">GoAnimate for Schools</a></li>
+                        <li class="hidden-xs">&nbsp;</li>
+                        <li class="hidden-xs">&nbsp;</li>
+                        <li class="hidden-xs">&nbsp;</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="site-footer-nav-col">
+                    <h5>Usage Guidelines</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/web/20181004174617/http://vyondhoster.000webhostapp.com/termsofuse">Terms of Service</a></li>
+                        <li><a href="/web/20181004174617/http://vyondhoster.000webhostapp.com/privacy">Privacy Policy</a></li>
+                        <li class="hidden-xs">&nbsp;</li>
+                        <li class="hidden-xs">&nbsp;</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="site-footer-nav-col">
+                    <h5>Getting Help</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://web.archive.org/web/20181004174617/https://blog.goanimate4schools.com/">Educator Experiences</a></li>
+                        <li><a href="https://web.archive.org/web/20181004174617/https://goanimate4schools.zendesk.com/hc/en-us">Help Center</a></li>
+                        <li class="hidden-xs">&nbsp;</li>
+                        <li class="hidden-xs">&nbsp;</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row site-footer-copyright">
+            <div class="col-sm-6">
+                <div class="site-footer-socials-container">
+                    Follow us on:
+                    <ul class="site-footer-socials clearfix">
+                        <li><a class="facebook" href="https://web.archive.org/web/20181004174617/https://www.facebook.com/GoAnimateInc">Facebook</a></li>
+                        <li><a class="twitter" href="https://web.archive.org/web/20181004174617/https://twitter.com/Go4Schools">Twitter</a></li>
+                        <li><a class="linkedin" href="https://web.archive.org/web/20181004174617/https://www.linkedin.com/company/goanimate">Linked In</a></li>
+                        <li><a class="gplus" href="https://web.archive.org/web/20181004174617/https://plus.google.com/+goanimate">Google+</a></li>
+                        <li><a class="youtube" href="https://web.archive.org/web/20181004174617/https://www.youtube.com/user/GoAnimate">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="pull-right">
+                    <img src="https://web.archive.org/web/20181004174617im_/https://d2qrjeyl4jwu9j.cloudfront.net/static/642cd772aad8e952/school/img/site/logo_amazon.png" alt="AWS Partner Network">
+                    &nbsp;&nbsp;&nbsp;
+                    GoAnimate © 2021
+                </div>
+            </div>
+        </div>
+
+    </div>
+</footer>
+<form enctype="multipart/form-data" action="/upload_movie" method="post">
+		<input id="file" type="file" onchange="this.form.submit()" name="import">
 	</form>
 	<script>
+		const closeReq = new XMLHttpRequest();
+		closeReq.open('GET', '/events/close');
+		closeReq.send();
+
 		var json;
 		var tbody = document.getElementsByTagName('tbody')[0];
 		var loadMore = document.getElementById('load_more');
@@ -697,7 +740,7 @@ _wq.push({ id: '70x3iky0kr', onReady: function(video) {
 				const tbl = json[c];
 				const date = tbl.date.substr(0, 10) + ' ' + tbl.date.substr(11);
 				tbody.insertAdjacentHTML('beforeend',
-					'<tr><td><img src="/movie_thumbs/' + tbl.id + '.png"></td><td><div>' + tbl.title.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;") + '</div><div>' + tbl.durationString + '</div></div></td><td><span>' + date + '</span></td><td><a href="javascript:;" onclick="popup(\'' + tbl.id + '\')"></a><a href="/go_full?movieId=' + tbl.id + '"></a><a href="/movies/' + tbl.id + '.xml" download="' + tbl.title + '"></a></td></tr>');
+					'<tr><td><img src="/movie_thumbs/' + tbl.id + '"></td><td><div>' + tbl.title + '</div><div>' + tbl.durationString + '</div></div></td><td><span>' + date.match(/./g).join('</span><span>') + '</span></td><td><a href="javascript:;" onclick="popup(\'' + tbl.id + '\')"></a><a href="/go_full?movieId=' + tbl.id + '"></a><a href="/movies/' + tbl.id + '.xml" download="' + tbl.title + '"></a></td></tr>');
 			}
 		}
 
@@ -709,7 +752,7 @@ _wq.push({ id: '70x3iky0kr', onReady: function(video) {
 		}
 
 		function popup(id) {
-			window.open('/player?movieId=' + id, 'MsgWindow', 'width=1280,height=723,left=' + (screen.width / 2 - 640) + ',top=' + (screen.height / 2 - 360));
+			window.open('/player?movieId=' + id, 'MsgWindow', 'width=1280,height=720,left=' + (screen.width / 2 - 640) + ',top=' + (screen.height / 2 - 360));
 		}
 	</script>
 	<style>
@@ -730,18 +773,18 @@ _wq.push({ id: '70x3iky0kr', onReady: function(video) {
 		}
 
 		header {
-			position: sticky;
+			position: fixed;
 			top: 0;
 			width: 100%;
 		}
 
 		header>:nth-child(1) {
+			height: 44px;
 			align-content: center;
-			background-color: #1e1e1e;
-			display: inline-block;
-			padding-bottom: 13px;
+			background-color: #fff;
+			color: #000;
 			text-align: center;
-			color: #fff;
+			display: inline-block;
 			width: 100%;
 		}
 
@@ -755,20 +798,14 @@ _wq.push({ id: '70x3iky0kr', onReady: function(video) {
 			height: 30px;
 		}
 
-		header>:nth-child(1)>:nth-child(1)>:nth-child(2) {
-			color: #666;
-			padding-left: 4px;
-			font-weight: 700;
-		}
-
 		header>:nth-child(1)>:nth-child(2) {
 			margin-right: 20px;
-			clear: both;
+			float: right;
 		}
 
 		.button_big,
 		.button_small {
-			margin-left: 20px;
+			margin-left: 10px;
 			margin-top: 7px;
 			display: inline-block;
 			padding-top: 5px;
@@ -776,11 +813,11 @@ _wq.push({ id: '70x3iky0kr', onReady: function(video) {
 			border-radius: 3px;
 			font-size: 14px;
 			text-decoration: none;
-			color: #fff;
+			color: #000;
 		}
 
 		.button_big {
-			background-color: #d85e27;
+			background-color: #43bca5;
 			width: 160px;
 		}
 
@@ -789,7 +826,7 @@ _wq.push({ id: '70x3iky0kr', onReady: function(video) {
 		}
 
 		.button_small:hover {
-			color: #d85e27;
+			color: #43bca5;
 		}
 
 		.button_big:hover,
@@ -797,9 +834,13 @@ _wq.push({ id: '70x3iky0kr', onReady: function(video) {
 			cursor: pointer;
 		}
 
+		.char_dropdown {
+			width: 200px;
+		}
+
 		.char_dropdown:hover>:nth-child(1) {
 			cursor: context-menu;
-			color: #d85e27;
+			color: #43bca5;
 		}
 
 		.char_dropdown>menu {
@@ -809,7 +850,7 @@ _wq.push({ id: '70x3iky0kr', onReady: function(video) {
 			left: 0;
 			z-index: 1000;
 			float: left;
-			width: 100%;
+			width: 190px;
 			padding: 10px 0;
 			margin: 9px 0 0;
 			list-style: none;
@@ -839,14 +880,14 @@ _wq.push({ id: '70x3iky0kr', onReady: function(video) {
 		}
 
 		.char_dropdown>menu>a:hover {
-			color: #d85e27;
-			background-color: #f5f5f5;
+			color: #43bca5;
+			background-color: #fff;
 		}
 
 		.char_dropdown>menu>div {
 			height: 1px;
 			margin: 10px 0;
-			background-color: #e5e5e5;
+			background-color: #ff0000;
 		}
 
 		.warning {
@@ -873,7 +914,7 @@ _wq.push({ id: '70x3iky0kr', onReady: function(video) {
 			margin-bottom: 127px;
 			margin-right: auto;
 			margin-left: auto;
-			margin-top: 70px;
+			margin-top: 127px;
 			background-color: transparent;
 			border-collapse: collapse;
 			border-spacing: 0;
@@ -884,41 +925,17 @@ _wq.push({ id: '70x3iky0kr', onReady: function(video) {
 			table {
 				width: 750px;
 			}
-
-			tr>:nth-child(2)>* {
-				width: 350px;
-			}
 		}
 
 		@media(min-width: 992px) {
 			table {
 				width: 970px;
 			}
-
-			tr>:nth-child(2)>* {
-				width: 580px;
-			}
-		}
-
-		@media (min-width: 1030px) {
-			header>:nth-child(1) {
-				padding-bottom: 0;
-				height: 44px;
-			}
-
-			header>:nth-child(1)>:nth-child(2) {
-				clear: none;
-				float: right;
-			}
 		}
 
 		@media(min-width: 1200px) {
 			table {
 				width: 1170px;
-			}
-
-			tr>:nth-child(2)>* {
-				width: 780px;
 			}
 		}
 
@@ -962,24 +979,15 @@ _wq.push({ id: '70x3iky0kr', onReady: function(video) {
 			color: #999;
 		}
 
-		tr>:nth-child(2)>:nth-child(1) {
-			overflow: hidden;
-			text-overflow: ellipsis;
-		}
-
-		tr>:nth-child(2)>:nth-child(2) {
-			font-family: monospace;
-		}
-
 		tr>:nth-child(3) {
-			width: 200px;
+			width: 250px;
 		}
 
 		tr>:nth-child(3)>* {
-			font-family: monospace;
 			display: inline-block;
 			text-align: center;
-			font-size: 14px;
+			font-size: 12px;
+			width: 8.5px;
 		}
 
 		tr>:nth-child(4) {
@@ -998,7 +1006,7 @@ _wq.push({ id: '70x3iky0kr', onReady: function(video) {
 		}
 
 		tr>:nth-child(4)>a:hover {
-			color: #d85e27;
+			color: #2d9e88;
 		}
 
 		tr>:nth-child(4)>:nth-child(1)::before {
@@ -1037,13 +1045,13 @@ _wq.push({ id: '70x3iky0kr', onReady: function(video) {
 		@font-face {
 			font-family: 'Sailec';
 			font-weight: 200;
-			src: url('/pages/fonts/Sailec-Light.woff') format('woff');
+			src: url('/pages/fonts/Comfortaa-Light.woff') format('woff');
 		}
 
 		@font-face {
 			font-family: 'Sailec';
 			font-weight: 400;
-			src: url('/pages/fonts/Sailec-Regular.woff') format('woff');
+			src: url('/pages/fonts/Comfortaa-Regular.woff') format('woff');
 		}
 
 		@font-face {
@@ -1056,7 +1064,7 @@ _wq.push({ id: '70x3iky0kr', onReady: function(video) {
 		@font-face {
 			font-family: 'Sailec';
 			font-weight: 700;
-			src: url('/pages/fonts/Sailec-Medium.woff') format('woff');
+			src: url('/pages/fonts/Comfortaa-Bold.woff') format('woff');
 		}
 
 		@font-face {
@@ -1066,499 +1074,4 @@ _wq.push({ id: '70x3iky0kr', onReady: function(video) {
 			font-style: normal;
 		}
 	</style>
-
-
-</div>
-
-<script type="text/javascript" charset="utf-8">
-var _kiq = _kiq || [];
-_kiq.push(['identify', "antoinejes10000@outlook.com"]);
-</script>
-</div>
-
-
-<!-- modals -->
-<div class="modal" id="export-details" role="dialog" aria-hidden="true" style="z-index:1050;">
-    <div class="modal-dialog">
-    <div class="modal-content">
-    <div class="modal-header has-back">
-        <button class="close" type="button" data-dismiss="modal" aria-hidden="true">×</button>
-        <button class="modal-back" title="Back" data-dismiss="modal" aria-hidden="true">&lt;</button>
-        <h3 class="modal-title">Video formats comparison</h3>
-    </div>
-    <div class="modal-body">
-
-            <table id="video-comparison-table">
-                <tbody><tr>
-                    <td style="width:50px;"></td>
-                    <td style="width:70px;"></td>
-                    <td style="width:140px;"><div class="head">360p</div></td>
-                    <td style="width:140px;"><div class="head">HD 720p</div></td>
-                    <td style="width:140px;"><div class="head">Full HD 1080p</div></td>
-                </tr>
-                <tr>
-                    <td rowspan="4" style="border-right:1px solid #ccc"><h5>Video</h5></td>
-                    <td style="text-align:left;"><strong>Resolution</strong></td>
-                    <td><strong>640 x 360</strong></td>
-                    <td><strong>1280 x 720</strong></td>
-                    <td><strong>1920 x 1080</strong></td>
-                </tr>
-                <tr>
-                    <td style="text-align:left;">Encoding</td>
-                    <td>H.264</td>
-                    <td>H.264</td>
-                    <td>H.264</td>
-                </tr>
-                <tr>
-                    <td style="text-align:left;">Bit rate</td>
-                    <td>3,200 kbps</td>
-                    <td>3,200 kbps</td>
-                    <td>3,200 kbps</td>
-                </tr>
-                <tr>
-                    <td style="text-align:left;">Frame rate</td>
-                    <td>24 frames / sec</td>
-                    <td>24 frames / sec</td>
-                    <td>24 frames / sec</td>
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td rowspan="4" style="border-right:1px solid #ccc"><h5>Audio</h5></td>
-                    <td style="text-align:left;">Encoding</td>
-                    <td>AAC</td>
-                    <td>AAC</td>
-                    <td>AAC</td>
-                </tr>
-                <tr>
-                    <td style="text-align:left;">Sampling rate</td>
-                    <td>44.1 kHz</td>
-                    <td>44.1 kHz</td>
-                    <td>44.1 kHz</td>
-                </tr>
-                <tr>
-                    <td style="text-align:left;"><strong>Bit rate</strong></td>
-                    <td><strong>192 kbps</strong></td>
-                    <td><strong>192 kbps</strong></td>
-                    <td><strong>192 kbps</strong></td>
-                </tr>
-                <tr>
-                    <td style="text-align:left;">Channels</td>
-                    <td>Stereo</td>
-                    <td>Stereo</td>
-                    <td>Stereo</td>
-                </tr>
-            </tbody></table>
-    </div>
-    <div class="modal-footer">
-        <button class="btn btn-default" data-dismiss="modal">Close</button>
-    </div>
-    </div>
-    </div>
-</div>
-
-<script>
-var videoCounts = {"all":"0","trash":"0"};
-
-// Folder counts. To be updated by myvideos.js.
-var folderCounts = 0;
-
-</script>
-
-<script src="https://d3v4eglovri8yt.cloudfront.net/static/50831fab928bf0f4/go/js/video.js.gz.js"></script>
-<script src="https://d3v4eglovri8yt.cloudfront.net/static/50831fab928bf0f4/go/js/myvideos.js.gz.js"></script>
-
-<div id="trial-unlock-overlay" class="modal" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button class="close" type="button" data-dismiss="modal" aria-hidden="true">×</button>
-                <h3 class="modal-title">Subscribe to unlock more features</h3>
-            </div>
-
-            <div class="modal-body text-center">
-                <div class="trial-upsell trial-upsell-unlock">
-                    <h2><img src="https://d3v4eglovri8yt.cloudfront.net/static/50831fab928bf0f4/go/img/trial/lock.png" alt=""> Unlock these features now</h2>
-
-                    <p class="text-feature">
-                        Remove the full screen watermark<br>
-                        Download up to 1080P (Full HD)<br>
-                        One-click publish                    </p>
-
-                    <div class="text-muted">
-                        <div>Publish to <img class="logo" src="https://d3v4eglovri8yt.cloudfront.net/static/50831fab928bf0f4/go/img/trial/logo_ga.png" alt=""> or export to</div>
-                        <div>
-                            <img class="logo-partner" src="https://d3v4eglovri8yt.cloudfront.net/static/50831fab928bf0f4/go/img/trial/logo_youtube20.png" alt="">
-                            <img class="logo-partner" src="https://d3v4eglovri8yt.cloudfront.net/static/50831fab928bf0f4/go/img/trial/logo_wistia20.png" alt="">
-                            <img class="logo-partner" src="https://d3v4eglovri8yt.cloudfront.net/static/50831fab928bf0f4/go/img/trial/logo_vidyard20.png" alt="">
-                        </div>
-                        <div>... and many more!</div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="modal-footer">
-                <a class="btn btn-orange" href="https://ga.vyond.com/business/videoplans?hook=preview.site">View Plans &amp; Pricing</a>
-            </div>
-        </div>
-    </div>
-</div>
-<div id="trial-expired-overlay" class="modal" role="dialog" aria-hidden="true">
-    <div class="modal-dialog" style="left: auto;margin-right: auto;margin-left: auto;">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-                <h3 class="modal-title">
-                    Your free trial has ended!                </h3>
-            </div>
-            <div class="modal-body text-center">
-                <img style="width: 100%;" src="https://d3v4eglovri8yt.cloudfront.net/static/50831fab928bf0f4/go/img/trial/expired.png" alt="">
-            </div>
-            <div class="modal-footer">
-                <a class="btn btn-orange" href="https://www.vyond.com/pricing">View Plans &amp; Pricing</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="modal-alpha-vm5" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                <h3 class="modal-title">Before You Head To Vyond Studio</h3>
-            </div>
-            <div class="modal-body">
-                <img class="center-block img-responsive" src="https://d3v4eglovri8yt.cloudfront.net/static/50831fab928bf0f4/go/img/vm5_alpha/video_copy.png" srcset="https://d3v4eglovri8yt.cloudfront.net/static/50831fab928bf0f4/go/img/vm5_alpha/video_copy.png 1x, https://d3v4eglovri8yt.cloudfront.net/static/50831fab928bf0f4/go/img/vm5_alpha/video_copy_2x.png 2x"><br>
-                <p>
-                    There may be content in this video that is not compatible with Vyond Studio (e.g. imported videos, PPT files, retired content, retired music).                </p>
-                <p>
-                    Your original video will not be impacted by making this copy to Vyond Studio. Videos created and edited in Vyond Studio cannot be copied to Legacy Video Maker.                </p>
-            </div>
-            <div class="modal-footer">
-                <a class="btn btn-default text-uppercase" href="#" data-dismiss="modal">Cancel</a>
-                <a class="btn btn-orange text-uppercase proceed-migration" href="#" target="_blank">Proceed</a>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- FOOTER -->
-<div class="site-footer">
-    <div class="container">
-        <div class="site-footer-nav row">
-            <div class="col-sm-3">
-                <div class="site-footer-nav-col">
-                    <h4><span>About GoAnimate</span></h4>
-                    <ul class="list-unstyled">
-                        <li><a href="https://goanimate.com/about">Who we are</a></li>
-                        <li><a href="https://resources.goanimate.com/careers/">Careers</a></li>
-                        <li><a href="https://goanimate.com/contactus">Contact Us</a></li>
-                        <li><a href="https://blog.goanimate.com/">Blog</a></li>
-                        <li><a href="https://press.goanimate.com/">Press</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="site-footer-nav-col">
-                    <h4><span>GoAnimate Solutions</span></h4>
-                    <ul class="list-unstyled">
-                        <li><a href="https://goanimate.com/business/videoplans?hook=footer_button.site">Plans and Pricing</a></li>
-                        <li><a href="https://goanimate.com/business/videoplans/federal?hook=footer_button.site">Plans for Federal Agencies</a></li>
-                        <li><a href="/pages/html/list.html" target="_blank">GoAnimate for Schools</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="site-footer-nav-col">
-                    <h4><span>Usage Guidelines</span></h4>
-                    <ul class="list-unstyled">
-                        <li><a href="https://web.archive.org/web/20170701063749/https://goanimate.com/termsofuse">Terms of Service</a></li>
-                        <li><a href="https://goanimate.com/privacy">Privacy Policy</a></li>
-                        <li><a href="https://web.archive.org/web/20170701063749/https://support.goanimate.com/hc/en-us/articles/202408574" target="_blank">Cancellation Policy</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="site-footer-nav-col">
-                    <h4>Getting Help</h4>
-                    <ul class="list-unstyled">
-                        <li><a href="https://resources.goanimate.com/">Resources</a></li>
-                        <li><a href="https://support.goanimate.com/">Help Center</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <hr>
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="site-footer-socials-container">
-                    Follow us on:
-                    <ul class="site-footer-socials">
-                        <li><a class="glyph-social glyph-facebook" href="https://www.facebook.com/GoAnimateInc"><span class="sr-only">Facebook</span></a></li>
-                        <li><a class="glyph-social glyph-twitter" href="https://twitter.com/GoAnimate"><span class="sr-only">Twitter</span></a></li>
-                        <li><a class="glyph-social glyph-linked-in" href="https://www.linkedin.com/company/goanimate"><span class="sr-only">LinkedIn</span></a></li>
-                        <li><a class="glyph-social glyph-google-plus" href="https://plus.google.com/+goanimate"><span class="sr-only">Google+</span></a></li>
-                        <li><a class="glyph-social glyph-youtube" href="https://www.youtube.com/user/GoAnimate"><span class="sr-only">YouTube</span></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="site-footer-copyright">
-                    <img src="https://web.archive.org/web/20170701063749im_/https://d3v4eglovri8yt.cloudfront.net/static/0a1d2e66927b3065/go/img/footer/logo_amazon.png" alt="AWS Partner Network">
-                    &nbsp;&nbsp;&nbsp;
-                    <div class="ga-copy">GoAnimate © 2018</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div id="studio_container" style="display: none;">
-    <div id="studio_holder"><!-- Full Screen Studio -->
-        <div style="top: 50%; position: relative;">
-            You can't use GoAnimate because Flash might be disabled. <a href="https://get.adobe.com/flashplayer/">Enable Flash</a>.
-        </div>
-    </div>
-</div>
-
-</div>
-<!-- END OF PAGE STRUCTURE -->
-
-
-<script>
-var IE = {
-  Version: function() {
-    var version = 999; // we assume a sane browser
-    if (navigator.appVersion.indexOf("MSIE") != -1)
-      // bah, IE again, lets downgrade version number
-      version = parseFloat(navigator.appVersion.split("MSIE")[1]);
-    return version;
-  }
-}
-
-var UserData = function() {
-  this.userData = null;
-  this.name = location.hostname;
-
-  if (IE.version > 6 && !this.userData) {
-    try {
-      this.userData = document.createElement('INPUT');
-      this.userData.type = "hidden";
-      this.userData.style.display = "none";
-      this.userData.addBehavior ("#default#userData");
-      document.body.appendChild(this.userData);
-      var expires = new Date();
-      expires.setDate(expires.getDate()+365);
-      this.userData.expires = expires.toUTCString();
-    } catch(e) {
-    }
-  }
-
-    this.setItem = function(key, value) {
-
-            this.userData.load(this.name);
-            this.userData.setAttribute(key, value);
-            this.userData.save(this.name);
-    }
-    this.getItem = function(key) {
-            this.userData.load(this.name);
-            return this.userData.getAttribute(key);
-    }
-    this.remove = function(key) {
-            this.userData.load(this.name);
-            this.userData.removeAttribute(key);
-            this.userData.save(this.name);
-    }
-
-}
-
-function locStorage(action, key, value){
-    var result;
-    if (typeof(localStorage) == 'undefined' ) {
-            // localStorge not supported
-    } else {
-        try {
-            switch(action){
-                case 'setItem':
-                    localStorage.setItem(key, value);
-                break;
-                case 'getItem':
-                    result = localStorage.getItem(key);
-                break;
-                case 'removeItem':
-                    localStorage.removeItem(key);
-                break;
-            }
-        return result;
-        } catch (e) {
-            if (e == QUOTA_EXCEEDED_ERR) {
-                //data wasn't successfully saved due to quota exceed so throw an error
-            }
-        }
-    }
-}
-function bannedUser(value){
-    if (value == "true"){
-        document.body.innerHTML="";
-    }
-}
-</script>
-<div style="height:0;overflow:hidden;"><object width="1" height="1">   <param name="vap" value="https://d3v4eglovri8yt.cloudfront.net/static/0a1d2e66927b3065/go/swf/VAP.swf">   <param name="bgcolor" value="#000000"><param name="allowFullScreen" value="true">   <param name="FlashVars" value="detect=true">   <param name="allowscriptaccess" value="always">   <embed src="https://web.archive.org/web/20170701063749oe_/https://d3v4eglovri8yt.cloudfront.net/static/0a1d2e66927b3065/go/swf/VAP.swf" flashvars="detect=true" type="application/x-shockwave-flash" width="1" height="1" bgcolor="#ffffff" allowscriptaccess="always" allowfullscreen="true" class="flpl_initiated"></object></div>    <script>
-    //check userdata (IE)
-    if (IE.version > 6) {
-        var ud = new UserData();
-        var ud_expiry = ud.getItem("vap");
-        if (ud_expiry > 1498891070){
-            document.body.innerHTML='';
-        }
-    }
-    //check localStorage
-    var ls_expiry = locStorage("getItem", "vap");
-    if (ls_expiry > 1498891070){
-        document.body.innerHTML='';
-    }
-    </script>
-
-<div id="container"></div>
-
-<div id="offer_container">
-</div>
-<script type="text/javascript">
-    </script>
-
-<!-- Start of Async HubSpot Analytics Code -->
-<script type="text/javascript">
-(function(d,s,i,r) {
-if (d.getElementById(i)){return;}
-var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
-n.id=i;n.src='//web.archive.org/web/20170701063749/https://js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/427840.js';
-e.parentNode.insertBefore(n, e);
-})(document,"script","hs-analytics",300000);
-</script>
-<!-- End of Async HubSpot Analytics Code -->
-
-<script type="text/javascript">
-    function logSendShareToGA() {
-        dataLayer.push({
-            'event': 'ga-pageview-t1',
-            'path': '/pageTracker/goals/reg/contactform'
-        });
-    }
-
-</script>
-
-
-
-<!--
-     FILE ARCHIVED ON 06:37:49 Jul 01, 2017 AND RETRIEVED FROM THE
-     INTERNET ARCHIVE ON 20:42:34 Jan 22, 2021.
-     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
-
-     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
-     SECTION 108(a)(3)).
--->
-<!--
-playback timings (ms):
-  captures_list: 598.343
-  exclusion.robots: 331.979
-  exclusion.robots.policy: 331.97
-  xauthn.identify: 199.586
-  xauthn.chkprivs: 132.169
-  RedisCDXSource: 26.405
-  esindex: 0.008
-  LoadShardBlock: 133.072 (3)
-  PetaboxLoader3.datanode: 112.42 (4)
-  CDXLines.iter: 29.648 (3)
-  load_resource: 88.189
-  PetaboxLoader3.resolve: 73.018
--->
-<script type="text/javascript" id="">var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
-if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
-{
-let window = _____WB$wombat$assign$function_____("window");
-let self = _____WB$wombat$assign$function_____("self");
-let document = _____WB$wombat$assign$function_____("document");
-let location = _____WB$wombat$assign$function_____("location");
-let top = _____WB$wombat$assign$function_____("top");
-let parent = _____WB$wombat$assign$function_____("parent");
-let frames = _____WB$wombat$assign$function_____("frames");
-let opener = _____WB$wombat$assign$function_____("opener");
-!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","//connect.facebook.net/en_US/fbevents.js");fbq("init","784667875001149");fbq("track","PageView");
-
-}</script>
-<noscript><img height="1" width="1" style="display:none" src="https://web.archive.org/web/20170701063749im_/https://www.facebook.com/tr?id=784667875001149&amp;ev=PageView&amp;noscript=1"></noscript>
-<script type="text/javascript" id="">var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
-if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
-{
-let window = _____WB$wombat$assign$function_____("window");
-let self = _____WB$wombat$assign$function_____("self");
-let document = _____WB$wombat$assign$function_____("document");
-let location = _____WB$wombat$assign$function_____("location");
-let top = _____WB$wombat$assign$function_____("top");
-let parent = _____WB$wombat$assign$function_____("parent");
-let frames = _____WB$wombat$assign$function_____("frames");
-let opener = _____WB$wombat$assign$function_____("opener");
-$(function(){function c(a,c,b){document.cookie=a+"\x3d"+escape(c)+"; path\x3d/; max-age\x3d"+b+";"}function f(a){return(a=document.cookie.match("(^|;) ?"+a+"\x3d([^;]*)(;|$)"))?unescape(a[2]):null}var d=5,g=900;$(window).on({unload:function(){c("lasturl",window.location.href,d)},onbeforeunload:function(){c("lasturl",window.location.href,d)},load:function(){var a=document.referrer,d=f("gasessid");""===a&&(a=f("lasturl"));if((""===a||null===d)&&"undefined"!==typeof ga){var a=new Date,b,e;try{var h=
-ga.getAll(),a=new Date;e=h[0].get("clientId");b=e+"."+a.getTime();ga("set","dimension1",e);ga("set","dimension2",b);dataLayer.push({GAClientId:e,GASessionId:b});c("gasessid",b,g)}catch(k){}}}})});
-
-}</script><script type="text/javascript" id="" src="https://web.archive.org/web/20170701063749js_/https://fast.wistia.com/static/integrations-hubspot-v1.js"></script><script type="text/javascript" id="">var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
-if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
-{
-let window = _____WB$wombat$assign$function_____("window");
-let self = _____WB$wombat$assign$function_____("self");
-let document = _____WB$wombat$assign$function_____("document");
-let location = _____WB$wombat$assign$function_____("location");
-let top = _____WB$wombat$assign$function_____("top");
-let parent = _____WB$wombat$assign$function_____("parent");
-let frames = _____WB$wombat$assign$function_____("frames");
-let opener = _____WB$wombat$assign$function_____("opener");
-var _aaq=window._aaq||(window._aaq=[]);(function(){var a=document,b=a.createElement("script"),a=a.getElementsByTagName("script")[0];b.type="text/javascript";b.defer=!0;b.async=!0;b.src=document.location.protocol+"//cdn.evergage.com/beacon/goanimate/engage/scripts/evergage.min.js";a.parentNode.insertBefore(b,a)})();
-
-}</script><script type="text/javascript" id="">var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
-if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
-{
-let window = _____WB$wombat$assign$function_____("window");
-let self = _____WB$wombat$assign$function_____("self");
-let document = _____WB$wombat$assign$function_____("document");
-let location = _____WB$wombat$assign$function_____("location");
-let top = _____WB$wombat$assign$function_____("top");
-let parent = _____WB$wombat$assign$function_____("parent");
-let frames = _____WB$wombat$assign$function_____("frames");
-let opener = _____WB$wombat$assign$function_____("opener");
-(function(){function b(){!1===c&&(c=!0,Munchkin.init("578-BPW-716"))}var c=!1,a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="//munchkin.marketo.net/munchkin.js";a.onreadystatechange=function(){"complete"!=this.readyState&&"loaded"!=this.readyState||b()};a.onload=b;document.getElementsByTagName("head")[0].appendChild(a)})();
-
-}</script><script type="text/javascript" id="" charset="utf-8">var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
-if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
-{
-let window = _____WB$wombat$assign$function_____("window");
-let self = _____WB$wombat$assign$function_____("self");
-let document = _____WB$wombat$assign$function_____("document");
-let location = _____WB$wombat$assign$function_____("location");
-let top = _____WB$wombat$assign$function_____("top");
-let parent = _____WB$wombat$assign$function_____("parent");
-let frames = _____WB$wombat$assign$function_____("frames");
-let opener = _____WB$wombat$assign$function_____("opener");
-var _eiq=_eiq||[],_engagio_settings={accountId:"175c7e69f5518230c00f72057c214a6926861f0d"};(function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"==document.location.protocol?"https://":"http://")+"web-analytics.engagio.com/js/ei.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})();
-
-}</script><div><iframe data-reactroot="" id="helpCenterForm" class="zEWidget-helpCenterForm" style="border: none; background: rgb(255, 255, 255); z-index: 999999; transform: translateZ(0px); position: fixed; opacity: 0; inset: -9999px 0px 0px -9999px; margin-top: 0px; height: 100%; width: 100%; transition-property: none; transition-timing-function: unset; max-width: 768px;" allow="autoplay 'self'; fullscreen 'self'"></iframe></div><div><iframe data-reactroot="" id="ticketSubmissionForm" class="zEWidget-ticketSubmissionForm" style="border: none; background: rgb(255, 255, 255); z-index: 999999; transform: translateZ(0px); position: fixed; opacity: 0; inset: -9999px 0px 0px -9999px; margin-top: 0px; height: 100%; width: 100%; transition-property: none; transition-timing-function: unset; max-width: 768px;" allow="autoplay 'self'; fullscreen 'self'"></iframe></div><div><iframe data-reactroot="" id="launcher" class="zEWidget-launcher zEWidget-launcher--active" style="border: none; background: transparent; z-index: 999998; transform: translateZ(0px); position: fixed; opacity: 1; right: 0px; bottom: 0px; width: 53px; height: 49px; margin: 10px 20px;" allow="autoplay 'self'; fullscreen 'self'"></iframe></div><div><iframe data-reactroot="" id="nps" class="zEWidget-nps" style="border: none; background: rgb(255, 255, 255); z-index: 999999; transform: translateZ(0px); position: fixed; opacity: 0; inset: -9999px 0px 0px -9999px; margin: 0px; width: 100%; height: 100%; transition-property: none; transition-timing-function: unset; max-width: 768px;" allow="autoplay 'self'; fullscreen 'self'"></iframe></div></body></html>
-
-             
-
-
-	
-               
-		
-
-
-		
-
-		
-
-
+</body></html>
