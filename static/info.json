@@ -50,8 +50,14 @@
 		},
 		"pages/img/(.*)(png|PNG)$": {
 			"headers": {
+<<<<<<< HEAD
 				"Content-Type": "image/png"
 			}
+=======
+				"Content-Type": "text/html; charset=UTF-8"
+			},
+			"content": "<?xml encoding=\"UTF-8\"?><watermarks><watermark style=\"g4s\"/></watermarks>"
+>>>>>>> 9257d11b3ff6f9c0f77ed0b38a1a11fb472abf4f
 		},
 		"pages/img/(.*)(jpg|JPG|jpeg|JPEG)$": {
 			"headers": {
