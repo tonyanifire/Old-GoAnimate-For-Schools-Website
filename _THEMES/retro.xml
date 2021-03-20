@@ -1250,7 +1250,7 @@
     <motion id="walk.swf" name="Walk" loop="Y" totalframe="8" enable="Y" aid="4808"/>
     <action id="angry.swf" name="angry" loop="Y" totalframe="50" enable="Y" aid="4809"/>
     <action id="confused.swf" name="confused" loop="Y" totalframe="70" enable="Y" aid="4810"/>
-    <action id="excited.swf" name="excited" loop="N" totalframe="75" enable="Y" aid="4811"/>
+    <action id="excited.swf" name="excited" loop="Y" totalframe="75" enable="Y" aid="4811"/>
     <action id="scared.swf" name="scared" loop="Y" totalframe="2" enable="Y" aid="4812"/>
     <action id="furious.swf" name="furious" loop="Y" totalframe="100" enable="Y" aid="4813"/>
     <action id="happy.swf" name="happy" loop="Y" totalframe="60" enable="Y" aid="4814"/>
