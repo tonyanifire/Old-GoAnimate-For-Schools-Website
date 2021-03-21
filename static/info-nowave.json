@@ -14,13 +14,6 @@
 			"statusCode": 302,
 			"content": ""
 		},
-		"/go/character_creator/family": {
-			"headers": {
-				"Location": "/pages/html/charactercreator/adam.html"
-			},
-			"statusCode": 302,
-			"content": ""
-		},
 		"/go/character_creator/family/new_char?type=eve": {
 			"headers": {
 				"Location": "/pages/html/charactercreator/eve.html"
