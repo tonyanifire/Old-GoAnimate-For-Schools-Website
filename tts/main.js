@@ -8,27 +8,35 @@ module.exports = function (voiceName, text) {
 		const voice = voices[voiceName];
 		switch (voice.source) {
 			case 'polly': {
-				var buffers = [];
-				var req = https.request({
-					hostname: 'pollyvoices.com',
-					port: '443',
-					path: '/api/sound/add',
-					method: 'POST',
+				var q = qs.encode({
+					texttype: "text",
+					text: text,
+					fallbackLanguage: "0",
+					voice: voice.arg,
+					rate: "0",
+					whisper: "false",
+					soft: "false",
+					wordbreakms: "0",
+					volume: "0",
+					marksid: "ca6108ea-0a10-476d-9c87-b32508002c80",
+					d: "true",
+					format: "mp3",
+				});
+				https.get({
+					host: 'talkify.net',
+					path: `/api/internal/speech?${q}`,
+					method: 'GET',
 					headers: {
-						'Content-Type': 'application/x-www-form-urlencoded',
+						Referer: 'https://talkify.net/text-to-speech',
+						Origin: 'https://talkify.net',
+						'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
 					},
 				}, r => {
-					r.on('data', b => buffers.push(b));
-					r.on('end', () => {
-						var json = JSON.parse(Buffer.concat(buffers));
-						if (json.file)
-							get(`https://pollyvoices.com${json.file}`).then(res);
-						else
-							rej();
-					});
+					var buffers = [];
+					r.on('data', d => buffers.push(d));
+					r.on('end', () => res(Buffer.concat(buffers)));
+					r.on('error', rej);
 				});
-				req.write(qs.encode({ text: text, voice: voice.arg }));
-				req.end();
 				break;
 			}
 			case 'cepstral':
@@ -128,6 +136,38 @@ module.exports = function (voiceName, text) {
 				}));
 				break;
 			}
+		}
+	});
+}
+            case 'readloud': {
+                const req = https.request({
+                    host: 'readloud.net',
+                    path: voice.arg,
+                    method: 'POST',
+                    port: '443',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+                }, r => {
+                    var buffers = [];
+                    r.on('data', d => buffers.push(d));
+                    r.on('end', () => {
+                        const html = Buffer.concat(buffers);
+                        const beg = html.indexOf('/tmp/');
+                        const end = html.indexOf('.mp3', beg) + 4;
+                        const sub = html.subarray(beg, end).toString();
+                        const loc = `https://readloud.net${sub}`;
+                        get(loc).then(res).catch(rej);
+                    });
+                    r.on('error', rej);
+                });
+                req.write(qs.encode({
+                    but1: text,
+                    but: 'Enviar',
+                }));
+                req.end();
+                break;
+            }
 		}
 	});
 }

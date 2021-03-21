@@ -24,10 +24,10 @@ module.exports = function (req, res, url) {
 	var attrs, params, title;
 	switch (url.pathname) {
 		case '/cc': {
-			title = 'Character Creator';
-			attrs = {
-				data: process.env.SWF_URL + '/cc.swf', // data: 'cc_.swf',
-				type: 'application/x-shockwave-flash', id: 'char_creator', width: '100%', height: '100%',
+			title = 'Import a character - Character Creator';
+			attrs = {	
+				data: process.env.SWF_URL + '/cc.swf', // data: 'cc.swf',
+				type: 'application/x-shockwave-flash', id: 'char_creator', width: '960', height: '600',
 			};
 			params = {
 				flashvars: {
@@ -42,30 +42,11 @@ module.exports = function (req, res, url) {
 			break;
 		}
 
-		case '/cc_browser': {
-			title = 'Character Creator Browser';
-			attrs = {
-				data: process.env.SWF_URL + '/cc_browser.swf', // data: 'cc_browser_.swf',
-				type: 'application/x-shockwave-flash', id: 'char_creator', width: '100%', height: '100%',
-			};
-			params = {
-				flashvars: {
-					'apiserver': '/', 'storePath': process.env.STORE_URL + '/<store>',
-					'clientThemePath': process.env.CLIENT_URL + '/<client_theme>', 'original_asset_id': query['id'] || null,
-					'themeId': 'business', 'ut': 60, 'bs': 'default', 'appCode': 'go', 'page': '', 'siteId': 'go',
-					'm_mode': 'school', 'isLogin': 'Y', 'isEmbed': 1, 'ctc': 'go', 'tlang': 'en_US',
-				},
-				allowScriptAccess: 'always',
-				movie: process.env.SWF_URL + '/cc_browser.swf', // 'http://localhost/cc_browser.swf'
-			};
-			break;
-		}
-		
 		case '/go_full': {
 			let presave = query.movieId && query.movieId.startsWith('m') ? query.movieId :
 				`m-${fUtil[query.noAutosave ? 'getNextFileId' : 'fillNextFileId']('movie-', '.xml')}`;
-			title = 'Video Editor';
-			attrs = {
+			title = 'Import/edit video on the Legacy Video Maker';
+			attrs = { 
 				data: process.env.SWF_URL + '/go_full.swf',
 				type: 'application/x-shockwave-flash', width: '100%', height: '100%',
 			};
@@ -74,7 +55,7 @@ module.exports = function (req, res, url) {
 					'apiserver': '/', 'storePath': process.env.STORE_URL + '/<store>', 'isEmbed': 1, 'ctc': 'go',
 					'ut': 60, 'bs': 'default', 'appCode': 'go', 'page': '', 'siteId': 'go', 'lid': 13, 'isLogin': 'Y', 'retut': 1,
 					'clientThemePath': process.env.CLIENT_URL + '/<client_theme>', 'themeId': 'business', 'tlang': 'en_US',
-					'presaveId': presave, 'goteam_draft_only': 1, 'isWide': 1, 'nextUrl': '/pages/html/list.html',
+					'presaveId': presave, 'goteam_draft_only': 1, 'isWide': 1, 'nextUrl': '/html/list.html',
 				},
 				allowScriptAccess: 'always',
 			};
@@ -83,7 +64,7 @@ module.exports = function (req, res, url) {
 		}
 
 		case '/player': {
-			title = 'Video Player';
+			title = 'Video Player - GoAnimateFor Schools Remastered';
 			attrs = {
 				data: process.env.SWF_URL + '/player.swf',
 				type: 'application/x-shockwave-flash', width: '100%', height: '100%',
