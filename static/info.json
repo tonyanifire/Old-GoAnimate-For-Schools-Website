@@ -98,7 +98,7 @@
 			"statusCode": 302,
 			"content": ""
 		},
-		"/go/character_creator/copy": {
+		"/go/character_creator/family/copy": {
 			"headers": {
 				"Location": "/cc?themeId=family&id=IDHERE"
 			},
