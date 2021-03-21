@@ -16,14 +16,14 @@
 		},
 		"/go/character_creator/family": {
 			"headers": {
-				"Location": "/cc?themeId=family&bs=adam"
+				"Location": "/pages/html/charactercreator/adam.html"
 			},
 			"statusCode": 302,
 			"content": ""
 		},
 		"/go/character_creator/cc2": {
 			"headers": {
-				"Location": "/cc?themeId=cc2"
+				"Location": "/pages/html/charactercreator/cc2.html"
 			},
 			"statusCode": 302,
 			"content": ""
@@ -73,6 +73,27 @@
 		"/go/character_creator/ninja": {
 			"headers": {
 				"Location": "/cc?themeId=ninja"
+			},
+			"statusCode": 302,
+			"content": ""
+		},
+		"/go/character_creator/family/new_char?type=eve": {
+			"headers": {
+				"Location": "/pages/html/charactercreator/eve.html"
+			},
+			"statusCode": 302,
+			"content": ""
+		},
+		"/go/character_creator/family/new_char?type=bob": {
+			"headers": {
+				"Location": "/pages/html/charactercreator/bob.html"
+			},
+			"statusCode": 302,
+			"content": ""
+		},
+		"/go/character_creator/family/new_char?type=rocky": {
+			"headers": {
+				"Location": "/pages/html/charactercreator/rocky.html"
 			},
 			"statusCode": 302,
 			"content": ""
