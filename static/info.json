@@ -30,7 +30,7 @@
 		},
 		"/go/character_creator/anime": {
 			"headers": {
-				"Location": "/cc?themeId=anime&bs=guy"
+				"Location": "/cc?themeId=anime"
 			},
 			"statusCode": 302,
 			"content": ""
@@ -58,7 +58,7 @@
 		},
 		"/go/character_creator/business": {
 			"headers": {
-				"Location": "/cc?themeId=family&bs=adam"
+				"Location": "/cc?themeId=family"
 			},
 			"statusCode": 302,
 			"content": ""
@@ -72,7 +72,7 @@
 		},
 		"/go/character_creator/family": {
 			"headers": {
-				"Location": "/pages/html/characterbrowser/custombackup.html"
+				"Location": "/cc?themeId=family"
 			},
 			"statusCode": 302,
 			"content": ""
