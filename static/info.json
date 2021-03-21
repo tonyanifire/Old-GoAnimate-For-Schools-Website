@@ -35,7 +35,7 @@
 			"statusCode": 302,
 			"content": ""
 		},
-		"/videomaker/full/infographics/tutorial": {
+		"/videomaker/full/retro/tutorial": {
 			"headers": {
 				"Location": "/pages/html/lvm2.html"
 			},
