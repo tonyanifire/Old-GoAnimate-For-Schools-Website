@@ -16,7 +16,7 @@
 		},
 		"/go/character_creator/cc2": {
 			"headers": {
-				"Location": "/pages/html/charactercreator/cc2.html"
+				"Location": "/pages/html/charactercreator/action.html"
 			},
 			"statusCode": 302,
 			"content": ""
@@ -70,44 +70,9 @@
 			"statusCode": 302,
 			"content": ""
 		},
-		"/go/character_creator/family/new_char?type=eve": {
-			"headers": {
-				"Location": "/pages/html/charactercreator/eve.html"
-			},
-			"statusCode": 302,
-			"content": ""
-		},
-		"/go/character_creator/family/new_char?type=bob": {
-			"headers": {
-				"Location": "/pages/html/charactercreator/bob.html"
-			},
-			"statusCode": 302,
-			"content": ""
-		},
-		"/go/character_creator/family/new_char?type=rocky": {
-			"headers": {
-				"Location": "/pages/html/charactercreator/rocky.html"
-			},
-			"statusCode": 302,
-			"content": ""
-		},
-		"/go/character_creator/family/new_char?type=adam": {
-			"headers": {
-				"Location": "/pages/html/charactercreator/adam.html"
-			},
-			"statusCode": 302,
-			"content": ""
-		},
-		"/go/character_creator/family/copy": {
-			"headers": {
-				"Location": "/cc?themeId=family&id=IDHERE"
-			},
-			"statusCode": 302,
-			"content": ""
-		},
 		"/go/character_creator/family": {
 			"headers": {
-				"Location": "/pages/html/characterbrowser/custom.html"
+				"Location": "/pages/html/characterbrowser/custombackup.html"
 			},
 			"statusCode": 302,
 			"content": ""
