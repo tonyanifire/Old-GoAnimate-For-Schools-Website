@@ -98,6 +98,13 @@
 			"statusCode": 302,
 			"content": ""
 		},
+		"/go/character_creator/copy": {
+			"headers": {
+				"Location": "/cc?themeId=family&id=IDHERE"
+			},
+			"statusCode": 302,
+			"content": ""
+		},
 		"/crossdomain.xml": {
 			"headers": {
 				"Content-Type": "text/html; charset=UTF-8"
