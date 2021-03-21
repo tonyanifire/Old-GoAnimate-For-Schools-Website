@@ -58,7 +58,7 @@
 		},
 		"/go/character_creator/business": {
 			"headers": {
-				"Location": "/cc?themeId=business"
+				"Location": "/cc?themeId=family&bs=adam"
 			},
 			"statusCode": 302,
 			"content": ""
@@ -101,6 +101,13 @@
 		"/go/character_creator/copy": {
 			"headers": {
 				"Location": "/cc?themeId=family&id=IDHERE"
+			},
+			"statusCode": 302,
+			"content": ""
+		},
+		"/go/character_creator/family": {
+			"headers": {
+				"Location": "/pages/html/characterbrowser/custom.html"
 			},
 			"statusCode": 302,
 			"content": ""
