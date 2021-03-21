@@ -42,6 +42,13 @@
 			"statusCode": 302,
 			"content": ""
 		},
+		"/go/character_creator/family/new_char?type=adam": {
+			"headers": {
+				"Location": "/pages/html/charactercreator/adam.html"
+			},
+			"statusCode": 302,
+			"content": ""
+		},
 		"/crossdomain.xml": {
 			"headers": {
 				"Content-Type": "text/html; charset=UTF-8"
