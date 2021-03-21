@@ -72,7 +72,7 @@
 		},
 		"/go/character_creator/family": {
 			"headers": {
-				"Location": "/pages/html/characterbrowser/custom.html"
+				"Location": "/pages/html/charactercreator/adam.html"
 			},
 			"statusCode": 302,
 			"content": ""
