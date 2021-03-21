@@ -58,8 +58,47 @@
                 </ul>
             </div>
 
-		<div class="warning">Welcome to GoAnimate for Schools Remastered, version 1.1.2! Feel free to make any video that you desire. Contact BluePeacocks, the lead developer for any assistance. However, don't put this on EvenNode (or something similar) or you may be hit with a DMCA complaint from Vyond.</div>
-	</header>
+		<div class="free-trial-banner">
+    <span class="glyph-pro glyph-warning-sign"></span>
+    Welcome to GoAnimate for Schools, version 1.1.2! Feel free to make any video that you desire. Contact Joseph The Animator, the lead developer for any assistance. However, don't put this on EvenNode (or something similar) or you may be hit with a DMCA complaint from Vyond.</div>
+<script>
+    (function(){
+        // Log last upsell date.
+        $('.free-trial-banner a[href$=\"pricing\"]').click(function(){
+            SetCookie('last_upsell_date', moment().format('MM/DD/YYYY'));
+        });
+    }());
+</script>
+
+<div class="my-video-container">
+<script src="https://fast.wistia.com/embed/medias/70x3iky0kr.jsonp" async=""></script>
+<script src="https://fast.wistia.com/assets/external/E-v1.js" async=""></script>
+<script>
+window._wq = window._wq || [];
+_wq.push({ id: '70x3iky0kr', onReady: function(video) {
+    video.bind('play', function() {
+        amplitudeTrackEvent(AMPLITUDE_EVENT.VM5_START_IN_APP_VIDEO, {
+            page_url: window.location.href,
+            wistia_id: '70x3iky0kr',
+            message: 'Make Videos Faster'
+        });
+
+        return video.unbind;
+    })
+}});
+</script>
+
+
+
+<div class="container">
+    <div class="page-header">
+        <h1 class="h2">
+            <ol class="breadcrumb video-breadcrumb">
+                
+            </ol>
+        </h1>
+    </div>
+</header>
 	<table>
 		<thead>
 			<tr>
