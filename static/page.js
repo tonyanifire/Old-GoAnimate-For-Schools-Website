@@ -141,8 +141,8 @@ module.exports = function (req, res, url) {
 				}
 			}
 		</script>
-		<link rel="stylesheet" type="text/css" href="/pages/css/modern-normalize.css">
-		<link rel="stylesheet" type="text/css" href="/pages/css/global.css">
+		<link rel="stylesheet" type="text/css" href="/pages/css/common_combined.css.gz.css">
+		<link rel="stylesheet" type="text/css" href="/pages/css/cc.css.gz.css">
 		<style>
 			body {
 				background: #eee;
@@ -150,45 +150,62 @@ module.exports = function (req, res, url) {
 		</style>
 	</head>
 	
-	<header id="header">
-		<a href="/"><h1 style="margin:0"><img id="logo" src="/pages/img/list_logo.png" alt="Wrapper: Offline"/></h1>
-		<nav id="headbuttons">
-			<a class="button_small" onclick="document.getElementById('file').click()">UPLOAD A MOVIE</a>
-			<div class="dropdown_contain button_small">
-				<div class="dropdown_button">CREATE A CHARACTER</div>
-				<nav class="dropdown_menu">
-					<h2>Comedy World</h2>
-					<a href="/cc?themeId=family&bs=adam">Guy (Adam)</a>
-					<a href="/cc?themeId=family&bs=eve">Girl (Eve)</a>
-					<a href="/cc?themeId=family&bs=bob">Fat (Bob)</a>
-					<a href="/cc?themeId=family&bs=rocky">Buff (Rocky)</a>
-					<hr>
-					<h2>Anime</h2>
-					<a href="/cc?themeId=anime&bs=guy">Guy</a>
-					<a href="/cc?themeId=anime&bs=girl">Girl</a>
-					<a href="/cc?themeId=ninjaanime&bs=guy">Guy (Ninja)</a>
-					<a href="/cc?themeId=ninjaanime&bs=girl">Girl (Ninja)</a>
-					<hr>
-					<h2>Peepz</h2>
-					<a href="/cc?themeId=cc2&bs=default">Lil Peepz</a>
-					<a href="/cc?themeId=chibi&bs=default">Chibi Peepz</a>
-					<a href="/cc?themeId=ninja&bs=default">Chibi Ninjas</a>
-				</nav>
-			</div>
-			<div class="dropdown_contain button_small">
-				<div class="dropdown_button">BROWSE CHARACTERS</div>
-				<nav class="dropdown_menu">
-					<a href="/cc_browser?themeId=family">Comedy World</a>
-					<a href="/cc_browser?themeId=anime">Anime</a>
-					<a href="/cc_browser?themeId=ninjaanime">Ninja Anime</a>
-					<a href="/cc_browser?themeId=cc2">Lil' Peepz</a>
-					<a href="/cc_browser?themeId=chibi">Chibi Peepz</a>
-					<a href="/cc_browser?themeId=ninja">Chibi Ninjas</a>
-				</nav>
-			</div>
-			<a href="/go_full" class="button_big">MAKE A VIDEO</a>
-		</nav>
-	</header>
+	<nav class="navbar site-nav" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            <a class="navbar-brand" href="/" title="GoAnimate for Schools">
+                <img alt="GoAnimate for Schools" src="/pages/img/logo4s.png">
+            </a>
+        </div>
+
+        <ul class="nav site-nav-alert-nav hidden-xs">
+            <li>
+                <a href="http://web.archive.org/web/20191027000240/http://vyondhoster.000webhostapp.com/messages" title="Messages"><span class="glyphicon glyphicon-envelope"></span><span class="count"></span></a>
+            </li>
+            <li>
+                <a href="http://web.archive.org/web/20191027000240/http://vyondhoster.000webhostapp.com/notifications" title="Notifications"><span class="glyphicon glyphicon-bell"></span><span class="count"></span></a>
+            </li>
+        </ul>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav navbar-right">
+
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="#" data-toggle="dropdown">Your Account <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="http://web.archive.org/web/20191027000240/http://vyondhoster.000webhostapp.com/student">Dashboard</a></li>
+                        <li><a href="http://web.archive.org/web/20191027000240/http://vyondhoster.000webhostapp.com/movies">Your Videos</a></li>
+                        <li class="divider"></li>
+                        <li><a href="http://web.archive.org/web/20191027000240/http://vyondhoster.000webhostapp.com/account">Account Settings</a></li>
+                        <li><a href="http://web.archive.org/web/20191027000240/http://vyondhoster.000webhostapp.com/profile/0DyHqK6Yj9dM">Your Profile</a></li>
+                        <li class="divider"></li>
+                        <li><a class="logout-link" href="http://web.archive.org/web/20191027000240/http://vyondhoster.000webhostapp.com/logoff">Logout</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="#" data-toggle="dropdown">Explore <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="http://web.archive.org/web/20191027000240/http://vyondhoster.000webhostapp.com/students">Students</a></li>
+                        <li><a href="http://web.archive.org/web/20191027000240/http://vyondhoster.000webhostapp.com/teachers">Teachers</a></li>
+                        <li><a href="http://web.archive.org/web/20191027000240/http://vyondhoster.000webhostapp.com/videos">Videos</a></li>
+                        <li class="divider"></li>
+                        <li><a href="http://web.archive.org/web/20191027000240/https://blog.goanimate4schools.com/">Educator Experiences</a></li>
+                        <li><a href="http://web.archive.org/web/20191027000240/http://vyondhoster.000webhostapp.com/public_faq">FAQ</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="hidden-sm hidden-md hidden-lg" href="/pages/html/lvm.html">Make a Video</a>
+                    <span class="site-nav-btn hidden-xs"><a class="btn btn-green" href="/pages/html/lvm.html">Make a Video</a></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 	
 	<body style="margin:0px" onload="hideHeader()">${toObjectString(attrs, params)
 		}</body>${stuff.pages[url.pathname] || ''}`);
