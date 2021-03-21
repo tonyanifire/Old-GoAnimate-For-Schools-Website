@@ -1,0 +1,116 @@
+<film copyable="0" duration="5.0" published="1" pshare="1" isWide="1">
+  <meta>
+    <title><![CDATA[I Finally Got Comedy World Back]]></title>
+    <tag><![CDATA[]]></tag>
+    <hiddenTag><![CDATA[]]></hiddenTag>
+    <desc><![CDATA[]]></desc>
+    <mver><![CDATA[4]]></mver>
+    <studio>d7446f28669693f5b7a35d41831e43c3662c48bf</studio>
+    <thumbnail index="0"/>
+    <palette>
+      <color value="333333"/>
+      <color value="999999"/>
+      <color value="fbfbfb"/>
+      <color value="669999"/>
+      <color value="55bbaa"/>
+      <color value="7fbb11"/>
+      <color value="15709b"/>
+      <color value="9a5d1"/>
+      <color value="6ab8d6"/>
+      <color value="da2021"/>
+      <color value="fecd31"/>
+      <color value="28c6c1"/>
+      <color value="37444f"/>
+      <color value="f4c8a7"/>
+      <color value="ff7e1e"/>
+    </palette>
+  </meta>
+  <scene id="SCENE0" adelay="60" lock="N" index="0" color="16777215" guid="8621AD0E-D9F3-41DB-8902-2369414D4DBF" combgId="common.cbg_ncc_blank">
+    <durationSetting countMinimum="1" countTransition="1" countAction="1" countBubble="1" countSpeech="1"/>
+    <bg id="cbg_ncc_blank_BG10" index="0">
+      <file>common.wall11.swf</file>
+      <color r="ccColorA">16743966</color>
+    </bg>
+    <char id="AVATOR161" index="1" raceCode="1">
+      <action face="1" motionface="1">ugc.C-1326-1604545141906.stand2.xml</action>
+      <x>221.1831711</x>
+      <y>558.7828062</y>
+      <xscale>1</xscale>
+      <yscale>1</yscale>
+      <rotation>0</rotation>
+    </char>
+    <char id="AVATOR162" index="2" raceCode="1">
+      <action face="-1,-1" motionface="-1">ugc.C-1589-1604545141906.walk.xml</action>
+      <head id="PROP33" raceCode="1">
+        <file>ugc.C-1589-1604545141906.head.head_schemeing.xml</file>
+      </head>
+      <x>-64.3,708</x>
+      <y>214.35,212.85</y>
+      <xscale>1,1</xscale>
+      <yscale>1,1</yscale>
+      <rotation>0,0</rotation>
+      <assetMotion ver="2"/>
+    </char>
+    <char id="AVATOR163" index="3" raceCode="1">
+      <action face="1" motionface="1">ugc.C-1987-1604545141906.stand2.xml</action>
+      <x>290.6047851</x>
+      <y>533.1328062</y>
+      <xscale>1</xscale>
+      <yscale>1</yscale>
+      <rotation>0</rotation>
+    </char>
+    <effectAsset id="EFFECT0" themecode="common" index="4">
+      <effect x="0" y="0" w="550" h="310" rotate="0" id="cut" type="ZOOM" isCut="true" isPan="false"/>
+      <x>47</x>
+      <y>24</y>
+      <width>550</width>
+      <height>354</height>
+      <speech>0</speech>
+    </effectAsset>
+    <aTranList>
+      <aTran id="2" target="AVATOR162" type="MotionPath" atype="Character" direction="2" section="6" timing="3" duration="24" delay="0">null</aTran>
+    </aTranList>
+  </scene>
+  <scene id="SCENE4" adelay="60" lock="N" index="1" color="16777215" guid="BC0B3178-1176-D2B4-4AA2-498C21B16F6A">
+    <durationSetting countMinimum="1" countTransition="1" countAction="1" countBubble="1" countSpeech="1"/>
+    <bg id="cbg_ncc_blank_BG10" index="0">
+      <file>common.wall11.swf</file>
+      <color r="ccColorA">16743966</color>
+    </bg>
+    <char id="AVATOR161" index="1" raceCode="1">
+      <action face="1" motionface="1">ugc.C-1326-1604545141906.stand2.xml</action>
+      <x>216.1331711</x>
+      <y>451.6828062</y>
+      <xscale>1</xscale>
+      <yscale>1</yscale>
+      <rotation>0</rotation>
+    </char>
+    <char id="AVATOR162" index="2" raceCode="1">
+      <action face="-1" motionface="-1">ugc.C-1589-1604545141906.stand2.xml</action>
+      <head id="PROP34" raceCode="1">
+        <file>ugc.C-1589-1604545141906.head.head_schemeing.xml</file>
+      </head>
+      <x>708</x>
+      <y>212.85</y>
+      <xscale>1</xscale>
+      <yscale>1</yscale>
+      <rotation>0</rotation>
+    </char>
+    <char id="AVATOR163" index="3" raceCode="1">
+      <action face="1" motionface="1">ugc.C-1987-1604545141906.stand2.xml</action>
+      <x>290.6047851</x>
+      <y>533.1328062</y>
+      <xscale>1</xscale>
+      <yscale>1</yscale>
+      <rotation>0</rotation>
+    </char>
+    <effectAsset id="EFFECT0" themecode="common" index="4">
+      <effect x="0" y="0" w="550" h="310" rotate="0" id="cut" type="ZOOM" isCut="true" isPan="false"/>
+      <x>47</x>
+      <y>24</y>
+      <width>550</width>
+      <height>354</height>
+      <speech>0</speech>
+    </effectAsset>
+  </scene>
+<cc_char file_name='ugc.char.C-1326-1604545141906.xml' scale='1' yscale='1' hxscale='1' hyscale='1' headdx='0' headdy='0'><color r="ccSkinColor" oc="0xFFE1C4">0xFFCE95</color><color r="ccEyeLib">0xFFCE95</color><color r="ccEyeIris">0x000000</color><color r="ccGlassesFrame">0xBE10B0</color><color r="ccGlassesLens">0x737373</color><color r="ccMouthLip">0x891258</color><color r="ccMustache">0x000000</color><color r="ccBeard">0xFFFFFF</color><color r="ccEyebrow">0x996633</color><color r="ccUpperMain" oc="0x336699">0x428247</color><color r="ccUpperMinor" oc="0xE5E5E5">0xE92C2C</color><color r="ccLowerMain" oc="0xCCBC9A">0x0B3573</color><color r="ccLowerMinor" oc="0xEEEEEE">0xFF1111</color><color r="ccHairMajor">0x8F1E1E</color><component type="bodyshape" component_id="adam" theme_id="family" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0"/><component type="skeleton" component_id="adam_001" theme_id="family" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0"/><component type="lower_body" component_id="adam_001" theme_id="family" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0"/><component type="faceshape" component_id="001" theme_id="family" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0"/><component type="eyebrow" component_id="003" theme_id="family" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0"/><component type="nose" component_id="001" theme_id="family" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0"/><component type="eye" component_id="004" theme_id="family" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0"/><component type="ear" component_id="006" theme_id="family" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0"/><component type="mouth" component_id="001" theme_id="family" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0"/><component type="upper_body" component_id="adam_018" theme_id="family" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0"/><component type="hair" component_id="014" theme_id="family" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0"/></cc_char><cc_char file_name='ugc.char.C-1589-1604545141906.xml' scale='1' yscale='1' hxscale='1' hyscale='1' headdx='0' headdy='0'><color r="ccSkinColor" oc="0xFFE1C4">0xFFCE95</color><color r="ccEyeLib">0xFFCE95</color><color r="ccEyeIris">0x000000</color><color r="ccGlassesFrame">0xBE10B0</color><color r="ccGlassesLens">0x737373</color><color r="ccMouthLip">0x891258</color><color r="ccMustache">0x000000</color><color r="ccBeard">0xFFFFFF</color><color r="ccEyebrow">0x000000</color><color r="ccUpperMain" oc="0x336699">0xFF6E00</color><color r="ccUpperMinor" oc="0xE5E5E5">0xFFFFFF</color><color r="ccLowerMain" oc="0xCCBC9A">0x000000</color><color r="ccLowerMinor" oc="0xEEEEEE">0x1900FF</color><color r="ccHairMajor">0x3E2A1B</color><component type="bodyshape" component_id="adam" theme_id="family" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0"/><component type="skeleton" component_id="adam_001" theme_id="family" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0"/><component type="lower_body" component_id="adam_001" theme_id="family" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0"/><component type="upper_body" component_id="adam_018" theme_id="family" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0"/><component type="faceshape" component_id="002" theme_id="family" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0"/><component type="hair" component_id="014" theme_id="family" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0"/><component type="mouth" component_id="201" theme_id="family" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0"/><component type="ear" component_id="001" theme_id="family" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0"/><component type="eye" component_id="009" theme_id="family" x="0" y="0" xscale="1.21" yscale="1.21" offset="0" rotation="0"/><component type="eyebrow" component_id="103" theme_id="family" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0"/><component type="nose" component_id="014" theme_id="family" x="1" y="1" xscale="1" yscale="1" offset="0" rotation="0"/></cc_char><cc_char file_name='ugc.char.C-1987-1604545141906.xml' scale='1' yscale='1' hxscale='1' hyscale='1' headdx='0' headdy='0'><color r="ccSkinColor" oc="0xFFE1C4">0xFFCE95</color><color r="ccEyeLib">0x4B0156</color><color r="ccEyeIris">0x480808</color><color r="ccGlassesFrame">0xFF0000</color><color r="ccGlassesLens">0xFF0000</color><color r="ccMouthLip">0xFF6666</color><color r="ccMustache">0x8B6F18</color><color r="ccBeard">0xC29B22</color><color r="ccEyebrow">0x000000</color><color r="ccUpperMain" oc="0x336699">0xF81D1D</color><color r="ccUpperMinor" oc="0xE5E5E5">0xF3F01E</color><color r="ccLowerMain" oc="0xCCBC9A">0x0B3573</color><color r="ccLowerMinor" oc="0xEEEEEE">0x116BA4</color><color r="ccHairMajor">0x8F1E1E</color><color r="ccDecMajor" targetComponent="ID2158">0x1F0271</color><component type="bodyshape" component_id="eve" theme_id="family" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0"/><component type="skeleton" component_id="eve_001" theme_id="family" x="0" y="0" xscale="1" yscale="1" offset="0" rotation="0"/><component type="mouth" component_id="101" theme_id="family" x="0" y="0" xscale="0.9" yscale="0.9" offset="0" rotation="0"/><component type="faceshape" component_id="034" theme_id="family" x="0" y="1" xscale="0.99" yscale="0.95" offset="0" rotation="0"/><component type="ear" component_id="007" theme_id="family" x="-2" y="0" xscale="0.9" yscale="0.9" offset="0" rotation="0"/><component type="eyebrow" component_id="108" theme_id="family" x="0" y="6" xscale="0.9" yscale="0.9" offset="0" rotation="0"/><component type="nose" component_id="014" theme_id="family" x="-2" y="0" xscale="0.9" yscale="0.9" offset="0" rotation="0"/><component type="eye" component_id="101" theme_id="family" x="0" y="5" xscale="0.84" yscale="0.9" offset="0" rotation="0"/><component type="hair" component_id="050" theme_id="family" x="-1" y="3" xscale="0.95" yscale="0.95" offset="0" rotation="0"/><component id="ID2158" type="facedecoration" component_id="038" theme_id="family" x="0" y="0" xscale="0.9" yscale="0.9" offset="0" rotation="0"/><component type="lower_body" component_id="eve_008" theme_id="family" x="0" y="0" xscale="0.9" yscale="0.9" offset="0" rotation="0"/><component type="upper_body" component_id="eve_009" theme_id="family" x="0" y="0" xscale="0.9" yscale="0.9" offset="0" rotation="0"/></cc_char></film>
