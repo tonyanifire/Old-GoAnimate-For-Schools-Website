@@ -30,14 +30,14 @@
 		},
 		"/videomaker/full/action/tutorial": {
 			"headers": {
-				"Location": "/pages/html/lvm.html"
+				"Location": "/pages/html/lvm1.html"
 			},
 			"statusCode": 302,
 			"content": ""
 		},
 		"/videomaker/full/infographics/tutorial": {
 			"headers": {
-				"Location": "/pages/html/lvm.html"
+				"Location": "/pages/html/lvm2.html"
 			},
 			"statusCode": 302,
 			"content": ""
