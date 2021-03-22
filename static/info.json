@@ -42,6 +42,13 @@
 			"statusCode": 302,
 			"content": ""
 		},
+		"/videomaker/full/custom/tutorial": {
+			"headers": {
+				"Location": "/pages/html/lvm3.html"
+			},
+			"statusCode": 302,
+			"content": ""
+		},
 		"/go/character_creator/cc2": {
 			"headers": {
 				"Location": "/pages/html/charactercreator/action.html"
