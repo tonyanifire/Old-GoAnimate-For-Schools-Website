@@ -21,7 +21,7 @@
 			"statusCode": 302,
 			"content": ""
 		},
-		"/videomaker/full/custom/tutorial": {
+		"/videomaker/full/whiteboard/tutorial": {
 			"headers": {
 				"Location": "/pages/html/lvm.html"
 			},
