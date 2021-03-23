@@ -127,6 +127,11 @@
 				"Content-Type": "text/css; charset=UTF-8"
 			}
 		},
+		"html/(.*)": {
+			"headers": {
+				"Content-Type": "text/html; charset=UTF-8"
+			}
+		},
 		"pages/fonts/(.*)": {
 			"headers": {
 				"Content-Type": "application/font-woff; charset=UTF-8"
