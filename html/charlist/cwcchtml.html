@@ -1,4 +1,4 @@
-﻿<html lang="en"><script type="text/javascript" class="__REQUESTLY__SCRIPT">(function(namespace) {
+<html lang="en"><script type="text/javascript" class="__REQUESTLY__SCRIPT">(function(namespace) {
   window[namespace] = window[namespace] || {};
   window[namespace].responseRules = {};
 
@@ -60,6 +60,67 @@
     setRequestHeader.apply(this, arguments);
   }
 })('__REQUESTLY__')</script><head><script type="text/javascript" class="__REQUESTLY__SCRIPT">(function(namespace) {
+  window[namespace] = window[namespace] || {};
+  window[namespace].responseRules = {};
+
+  let open = XMLHttpRequest.prototype.open;
+  XMLHttpRequest.prototype.open = function(method) {
+    this.addEventListener('readystatechange', function() {
+      if (this.readyState === 4 && window[namespace].responseRules.hasOwnProperty(this.responseURL)) {
+        const responseRule = window[namespace].responseRules[this.responseURL];
+        const {response, id} = responseRule;
+        const responseType = this.responseType;
+        let customResponse;
+
+        customResponse = response.type === 'code' ? responseRule.evaluator({
+            method,
+            url: this.responseURL,
+            requestHeaders: this.requestHeaders,
+            requestData: this.requestData,
+            responseType: this.responseType,
+            response: this.response
+          }) : response.value;
+
+        Object.defineProperty(this, 'response', {
+          get: function () {
+            if (response.type === 'static' && responseType === 'json') {
+              return JSON.parse(customResponse);
+            }
+            return customResponse;
+          }
+        });
+
+        if (responseType === '' || responseType === 'text') {
+          Object.defineProperty(this, 'responseText', {
+            get: function () {
+              return customResponse;
+            }
+          });
+        }
+
+        window.postMessage({
+          from: 'requestly',
+          type: 'response_rule_applied',
+          id
+        }, window.location.href);
+      }
+    }, false);
+    open.apply(this, arguments);
+  };
+
+  let send = XMLHttpRequest.prototype.send;
+  XMLHttpRequest.prototype.send = function(data) {
+    this.requestData = data;
+    send.apply(this, arguments);
+  };
+
+  let setRequestHeader = XMLHttpRequest.prototype.setRequestHeader;
+  XMLHttpRequest.prototype.setRequestHeader = function(header, value) {
+    this.requestHeaders = this.requestHeaders || {};
+    this.requestHeaders[header] = value;
+    setRequestHeader.apply(this, arguments);
+  }
+})('__REQUESTLY__')</script><script type="text/javascript" class="__REQUESTLY__SCRIPT">(function(namespace) {
   window[namespace] = window[namespace] || {};
   window[namespace].responseRules = {};
 
@@ -530,8 +591,7 @@ if (self !== top) {
                 <li>
                     <a class="hidden-sm hidden-md hidden-lg" href="https://web.archive.org/web/20181004174617/http://vyondhoster.000webhostapp.com/create">Make a Video</a>
                     <span class="site-nav-btn hidden-xs"><a class="btn btn-green" href="/html/themelist/themelist.html">Make a Video</a>
-<a class="btn btn-green" href="https://discord.gg/FjMMyXn">Discord</a></span>
-                </li>
+                </span></li>
             </ul>
         </div>
     </div>
@@ -542,7 +602,7 @@ It can be a
 
 or 
 
-<img alt="Vyond Legacy" src="/pages/img/logo4s.png">
+<img alt="Vyond Legacy" src="https://web.archive.org/web/20180427233045im_/https://d2qrjeyl4jwu9j.cloudfront.net/static/5df496d33b147723/school/img/site/logo4s.png">
 character.
  To do this, you need to add &amp;id=(ID) to your character creator url.
 </div>
@@ -559,9 +619,8 @@ character.
 
 <div id="ccbrowser-container" align="center">
     <div style="height:600px;text-align:center;position:relative;">
-        <div style="top:45%;position:relative;">
-<a href="/html/charcreator/adam.html"><img alt="man" src="man.png"></a>
-<a href="https://josephcrosmanplays532.github.io/character_creator_fix/eve.html"><img alt="man" src="woman.png"></a>
+        <div style="top:45%;position:relative;"><a href="/html/charcreator/adam.html"><img alt="man" src="man.png"></a>
+<a href="/html/charcreator/eve.html"><img alt="man" src="woman.png"></a>
 <a href="/html/charcreator/bob.html"><img alt="man" src="fatman.png"></a>
 <a href="/html/charcreator/rocky.html"><img alt="man" src="strong.png"></a>
         </div>
