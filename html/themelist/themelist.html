@@ -1,0 +1,831 @@
+﻿<html lang="en"><script type="text/javascript" class="__REQUESTLY__SCRIPT">(function(namespace) {
+  window[namespace] = window[namespace] || {};
+  window[namespace].responseRules = {};
+
+  let open = XMLHttpRequest.prototype.open;
+  XMLHttpRequest.prototype.open = function(method) {
+    this.addEventListener('readystatechange', function() {
+      if (this.readyState === 4 && window[namespace].responseRules.hasOwnProperty(this.responseURL)) {
+        const responseRule = window[namespace].responseRules[this.responseURL];
+        const {response, id} = responseRule;
+        const responseType = this.responseType;
+        let customResponse;
+
+        customResponse = response.type === 'code' ? responseRule.evaluator({
+            method,
+            url: this.responseURL,
+            requestHeaders: this.requestHeaders,
+            requestData: this.requestData,
+            responseType: this.responseType,
+            response: this.response
+          }) : response.value;
+
+        Object.defineProperty(this, 'response', {
+          get: function () {
+            if (response.type === 'static' && responseType === 'json') {
+              return JSON.parse(customResponse);
+            }
+            return customResponse;
+          }
+        });
+
+        if (responseType === '' || responseType === 'text') {
+          Object.defineProperty(this, 'responseText', {
+            get: function () {
+              return customResponse;
+            }
+          });
+        }
+
+        window.postMessage({
+          from: 'requestly',
+          type: 'response_rule_applied',
+          id
+        }, window.location.href);
+      }
+    }, false);
+    open.apply(this, arguments);
+  };
+
+  let send = XMLHttpRequest.prototype.send;
+  XMLHttpRequest.prototype.send = function(data) {
+    this.requestData = data;
+    send.apply(this, arguments);
+  };
+
+  let setRequestHeader = XMLHttpRequest.prototype.setRequestHeader;
+  XMLHttpRequest.prototype.setRequestHeader = function(header, value) {
+    this.requestHeaders = this.requestHeaders || {};
+    this.requestHeaders[header] = value;
+    setRequestHeader.apply(this, arguments);
+  }
+})('__REQUESTLY__')</script><head><script type="text/javascript" class="__REQUESTLY__SCRIPT">(function(namespace) {
+  window[namespace] = window[namespace] || {};
+  window[namespace].responseRules = {};
+
+  let open = XMLHttpRequest.prototype.open;
+  XMLHttpRequest.prototype.open = function(method) {
+    this.addEventListener('readystatechange', function() {
+      if (this.readyState === 4 && window[namespace].responseRules.hasOwnProperty(this.responseURL)) {
+        const responseRule = window[namespace].responseRules[this.responseURL];
+        const {response, id} = responseRule;
+        const responseType = this.responseType;
+        let customResponse;
+
+        customResponse = response.type === 'code' ? responseRule.evaluator({
+            method,
+            url: this.responseURL,
+            requestHeaders: this.requestHeaders,
+            requestData: this.requestData,
+            responseType: this.responseType,
+            response: this.response
+          }) : response.value;
+
+        Object.defineProperty(this, 'response', {
+          get: function () {
+            if (response.type === 'static' && responseType === 'json') {
+              return JSON.parse(customResponse);
+            }
+            return customResponse;
+          }
+        });
+
+        if (responseType === '' || responseType === 'text') {
+          Object.defineProperty(this, 'responseText', {
+            get: function () {
+              return customResponse;
+            }
+          });
+        }
+
+        window.postMessage({
+          from: 'requestly',
+          type: 'response_rule_applied',
+          id
+        }, window.location.href);
+      }
+    }, false);
+    open.apply(this, arguments);
+  };
+
+  let send = XMLHttpRequest.prototype.send;
+  XMLHttpRequest.prototype.send = function(data) {
+    this.requestData = data;
+    send.apply(this, arguments);
+  };
+
+  let setRequestHeader = XMLHttpRequest.prototype.setRequestHeader;
+  XMLHttpRequest.prototype.setRequestHeader = function(header, value) {
+    this.requestHeaders = this.requestHeaders || {};
+    this.requestHeaders[header] = value;
+    setRequestHeader.apply(this, arguments);
+  }
+})('__REQUESTLY__')</script><script type="text/javascript" class="__REQUESTLY__SCRIPT">(function(namespace) {
+  window[namespace] = window[namespace] || {};
+  window[namespace].responseRules = {};
+
+  let open = XMLHttpRequest.prototype.open;
+  XMLHttpRequest.prototype.open = function(method) {
+    this.addEventListener('readystatechange', function() {
+      if (this.readyState === 4 && window[namespace].responseRules.hasOwnProperty(this.responseURL)) {
+        const responseRule = window[namespace].responseRules[this.responseURL];
+        const {response, id} = responseRule;
+        const responseType = this.responseType;
+        let customResponse;
+
+        customResponse = response.type === 'code' ? responseRule.evaluator({
+            method,
+            url: this.responseURL,
+            requestHeaders: this.requestHeaders,
+            requestData: this.requestData,
+            responseType: this.responseType,
+            response: this.response
+          }) : response.value;
+
+        Object.defineProperty(this, 'response', {
+          get: function () {
+            if (response.type === 'static' && responseType === 'json') {
+              return JSON.parse(customResponse);
+            }
+            return customResponse;
+          }
+        });
+
+        if (responseType === '' || responseType === 'text') {
+          Object.defineProperty(this, 'responseText', {
+            get: function () {
+              return customResponse;
+            }
+          });
+        }
+
+        window.postMessage({
+          from: 'requestly',
+          type: 'response_rule_applied',
+          id
+        }, window.location.href);
+      }
+    }, false);
+    open.apply(this, arguments);
+  };
+
+  let send = XMLHttpRequest.prototype.send;
+  XMLHttpRequest.prototype.send = function(data) {
+    this.requestData = data;
+    send.apply(this, arguments);
+  };
+
+  let setRequestHeader = XMLHttpRequest.prototype.setRequestHeader;
+  XMLHttpRequest.prototype.setRequestHeader = function(header, value) {
+    this.requestHeaders = this.requestHeaders || {};
+    this.requestHeaders[header] = value;
+    setRequestHeader.apply(this, arguments);
+  }
+})('__REQUESTLY__')</script><script type="text/javascript" class="__REQUESTLY__SCRIPT">(function(namespace) {
+  window[namespace] = window[namespace] || {};
+  window[namespace].responseRules = {};
+
+  let open = XMLHttpRequest.prototype.open;
+  XMLHttpRequest.prototype.open = function(method) {
+    this.addEventListener('readystatechange', function() {
+      if (this.readyState === 4 && window[namespace].responseRules.hasOwnProperty(this.responseURL)) {
+        const responseRule = window[namespace].responseRules[this.responseURL];
+        const {response, id} = responseRule;
+        const responseType = this.responseType;
+        let customResponse;
+
+        customResponse = response.type === 'code' ? responseRule.evaluator({
+            method,
+            url: this.responseURL,
+            requestHeaders: this.requestHeaders,
+            requestData: this.requestData,
+            responseType: this.responseType,
+            response: this.response
+          }) : response.value;
+
+        Object.defineProperty(this, 'response', {
+          get: function () {
+            if (response.type === 'static' && responseType === 'json') {
+              return JSON.parse(customResponse);
+            }
+            return customResponse;
+          }
+        });
+
+        if (responseType === '' || responseType === 'text') {
+          Object.defineProperty(this, 'responseText', {
+            get: function () {
+              return customResponse;
+            }
+          });
+        }
+
+        window.postMessage({
+          from: 'requestly',
+          type: 'response_rule_applied',
+          id
+        }, window.location.href);
+      }
+    }, false);
+    open.apply(this, arguments);
+  };
+
+  let send = XMLHttpRequest.prototype.send;
+  XMLHttpRequest.prototype.send = function(data) {
+    this.requestData = data;
+    send.apply(this, arguments);
+  };
+
+  let setRequestHeader = XMLHttpRequest.prototype.setRequestHeader;
+  XMLHttpRequest.prototype.setRequestHeader = function(header, value) {
+    this.requestHeaders = this.requestHeaders || {};
+    this.requestHeaders[header] = value;
+    setRequestHeader.apply(this, arguments);
+  }
+})('__REQUESTLY__')</script><script type="text/javascript" class="__REQUESTLY__SCRIPT">(function(namespace) {
+  window[namespace] = window[namespace] || {};
+  window[namespace].responseRules = {};
+
+  let open = XMLHttpRequest.prototype.open;
+  XMLHttpRequest.prototype.open = function(method) {
+    this.addEventListener('readystatechange', function() {
+      if (this.readyState === 4 && window[namespace].responseRules.hasOwnProperty(this.responseURL)) {
+        const responseRule = window[namespace].responseRules[this.responseURL];
+        const {response, id} = responseRule;
+        const responseType = this.responseType;
+        let customResponse;
+
+        customResponse = response.type === 'code' ? responseRule.evaluator({
+            method,
+            url: this.responseURL,
+            requestHeaders: this.requestHeaders,
+            requestData: this.requestData,
+            responseType: this.responseType,
+            response: this.response
+          }) : response.value;
+
+        Object.defineProperty(this, 'response', {
+          get: function () {
+            if (response.type === 'static' && responseType === 'json') {
+              return JSON.parse(customResponse);
+            }
+            return customResponse;
+          }
+        });
+
+        if (responseType === '' || responseType === 'text') {
+          Object.defineProperty(this, 'responseText', {
+            get: function () {
+              return customResponse;
+            }
+          });
+        }
+
+        window.postMessage({
+          from: 'requestly',
+          type: 'response_rule_applied',
+          id
+        }, window.location.href);
+      }
+    }, false);
+    open.apply(this, arguments);
+  };
+
+  let send = XMLHttpRequest.prototype.send;
+  XMLHttpRequest.prototype.send = function(data) {
+    this.requestData = data;
+    send.apply(this, arguments);
+  };
+
+  let setRequestHeader = XMLHttpRequest.prototype.setRequestHeader;
+  XMLHttpRequest.prototype.setRequestHeader = function(header, value) {
+    this.requestHeaders = this.requestHeaders || {};
+    this.requestHeaders[header] = value;
+    setRequestHeader.apply(this, arguments);
+  }
+})('__REQUESTLY__')</script><script type="text/javascript" class="__REQUESTLY__SCRIPT">(function(namespace) {
+  window[namespace] = window[namespace] || {};
+  window[namespace].responseRules = {};
+
+  let open = XMLHttpRequest.prototype.open;
+  XMLHttpRequest.prototype.open = function(method) {
+    this.addEventListener('readystatechange', function() {
+      if (this.readyState === 4 && window[namespace].responseRules.hasOwnProperty(this.responseURL)) {
+        const responseRule = window[namespace].responseRules[this.responseURL];
+        const {response, id} = responseRule;
+        const responseType = this.responseType;
+        let customResponse;
+
+        customResponse = response.type === 'code' ? responseRule.evaluator({
+            method,
+            url: this.responseURL,
+            requestHeaders: this.requestHeaders,
+            requestData: this.requestData,
+            responseType: this.responseType,
+            response: this.response
+          }) : response.value;
+
+        Object.defineProperty(this, 'response', {
+          get: function () {
+            if (response.type === 'static' && responseType === 'json') {
+              return JSON.parse(customResponse);
+            }
+            return customResponse;
+          }
+        });
+
+        if (responseType === '' || responseType === 'text') {
+          Object.defineProperty(this, 'responseText', {
+            get: function () {
+              return customResponse;
+            }
+          });
+        }
+
+        window.postMessage({
+          from: 'requestly',
+          type: 'response_rule_applied',
+          id
+        }, window.location.href);
+      }
+    }, false);
+    open.apply(this, arguments);
+  };
+
+  let send = XMLHttpRequest.prototype.send;
+  XMLHttpRequest.prototype.send = function(data) {
+    this.requestData = data;
+    send.apply(this, arguments);
+  };
+
+  let setRequestHeader = XMLHttpRequest.prototype.setRequestHeader;
+  XMLHttpRequest.prototype.setRequestHeader = function(header, value) {
+    this.requestHeaders = this.requestHeaders || {};
+    this.requestHeaders[header] = value;
+    setRequestHeader.apply(this, arguments);
+  }
+})('__REQUESTLY__')</script><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="themelistfiles/analytics.js" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app23.us.archive.org';v.server_ms=526;archive_analytics.send_pageview({});});</script><script type="text/javascript" src="themelistfiles/playback.bundle.js" charset="utf-8"></script>
+<script type="text/javascript" src="themelistfiles/wombat.js" charset="utf-8"></script>
+<script type="text/javascript">
+if (window._WBWombatInit) {
+  wbinfo = {}
+  wbinfo.url = "http://vyondhoster.000webhostapp.com:80/videomaker.html";
+  wbinfo.timestamp = "20181004174617";
+  wbinfo.request_ts = "20181004174617";
+  wbinfo.prefix = "https://web.archive.org/web/";
+  wbinfo.mod = "if_";
+  wbinfo.is_framed = false;
+  wbinfo.is_live = false;
+  wbinfo.coll = "web";
+  wbinfo.proxy_magic = "";
+  wbinfo.static_prefix = "/_static/";
+  wbinfo.enable_auto_fetch = true;
+  wbinfo.auto_fetch_worker_prefix = "https://web.archive.org/web/";
+  wbinfo.wombat_ts = "20181004174617";
+  wbinfo.wombat_sec = "1538675177";
+  wbinfo.wombat_scheme = "https";
+  wbinfo.wombat_host = "vyondhoster.000webhostapp.com:80";
+  wbinfo.ignore_prefixes = ["/__wb/",
+                            "/_static/",
+                            "/web/",
+                            "http://analytics.archive.org/",
+                            "https://analytics.archive.org/",
+                            "//analytics.archive.org/",
+                            "http://archive.org/",
+                            "https://archive.org/",
+                            "//archive.org/",
+                            "http://faq.web.archive.org/",
+                            "http://web.archive.org/",
+                            "https://web.archive.org/"
+                            ];
+  wbinfo.wombat_opts = {};
+  window._WBWombatInit(wbinfo);
+}
+__wm.init("https://web.archive.org/web");
+</script>
+
+<link rel="stylesheet" type="text/css" href="themelistfiles/iconochive.css">
+<!-- End Wayback Rewrite JS Include -->
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+
+<title>Video Maker - GoAnimate for Schools</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="description" content="GoAnimate for Schools is a safe environment for students to fully express their creativity through video and a great place for educators to share educational videos with other educators worldwide.">
+
+<meta property="og:site_name" content="GoAnimate for Schools">
+<meta property="fb:app_id" content="122508887813978">
+<meta name="google-site-verification" content="Vta3YTpj6Kx6u4p-EzeMArY0alNItkyUYYMvNM8seVI">
+
+
+
+<link rel="stylesheet" href="themelistfiles/common_combined.css.gz.css">
+
+<link rel="stylesheet" href="themelistfiles/videomaker.css.gz.css">
+
+<script>
+var srv_tz_os = -4, view_name = "school", user_cookie_name = "u_info_school";
+var user_country = "US";
+</script>
+
+<!--[if lt IE 9]>
+<script src="https://d2qrjeyl4jwu9j.cloudfront.net/static/642cd772aad8e952/go/js/lib/html5shiv.js.gz.js"></script>
+<![endif]-->
+<script src="themelistfiles/common_combined.js.gz.js"></script>
+<script type="text/javascript" src="themelistfiles/goserver_js-en_US.json.gz.json"></script>
+
+
+
+<!-- Google Knowledge Graph -->
+<script type="application/ld+json">
+{
+    "@context": "https://web.archive.org/web/20181004174617/http://schema.org",
+    "@type": "Organization",
+    "name": "GoAnimate",
+    "url": "https://web.archive.org/web/20181004174617/http://goanimate.com",
+    "logo": "https://web.archive.org/web/20181004174617/http://gawpstorage.s3.amazonaws.com/img/google_knowledge_graph_logo.jpg",
+    "sameAs": [
+        "https://web.archive.org/web/20181004174617/http://www.facebook.com/GoAnimateInc",
+        "https://web.archive.org/web/20181004174617/http://twitter.com/GoAnimate",
+        "https://web.archive.org/web/20181004174617/http://www.linkedin.com/company/goanimate",
+        "https://web.archive.org/web/20181004174617/http://plus.google.com/+goanimate",
+        "https://web.archive.org/web/20181004174617/http://www.youtube.com/user/GoAnimate"
+    ]
+}
+</script>
+
+<style type="text/css" id="sestylePopup">#SESearchPopupId { top:5px;z-index:2147483646;cursor: pointer;right: 20px;position:fixed;text-align:left;color:#fff;font-family:Helvetica, Arial, sans-serif;width:372px;height:60px;border:1px solid #929292;border-radius:4px;background: -moz-linear-gradient(center top , #D9DFDF 0pt, #D9DFDF 3%, #E9E9E9 100%) repeat scroll 0 0 transparent; background: linear-gradient(to top,#D9DFDF 0,#E9E9E9 100%); } #SESearchPopupId .SESearchImgContainer { float:left;width:50px;height:70px; } #SESearchPopupId .SESearchImgage { width:24px;height:24px; margin-left:10px; margin-top:10px; } #SESearchPopupId .SESearchImgage img { width:24px;height:24px; } #SESearchPopupId .SESearchContent { float:left;color:#4C4C4C;line-height: 20px;margin-top: 10px; } #SESearchPopupId .SESearchContent #sbNotifCloseBtn { position: absolute; top: 5px; right: 5px; width:18px; height:18px; float:tight; background: url(https://web.archive.org/web/20181004174617im_/chrome-extension://gngocbkfmikdgphklgmmehbjjlfgdemm/img/pops/close.svg) no-repeat center; cursor: pointer; } #SESearchPopupId .SESearchContent .SESearchContentText { font-size: 15px;font-weight: bold;width: 320px; } #SESearchPopupId .SESearchContent #clickViewText { font-size: 12px; color: #2388af;} div[id^="SBStatePopup"] #clickViewText a { font-size: 12px !important; color: #2388af !important; display: table; height: 100%; text-decoration: none; } .notifySEClass { z-index:2147483646;right: 20px;position:fixed; padding: 4px; text-align:left;color:#fff;font-family:Helvetica, Arial, sans-serif;width:372px;height:70px;border:1px solid #999;border-radius:4px;background-color:#fff;overflow-y: auto;overflow-x: hidden;box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.4); display: block; top: 5px; box-sizing: border-box; } .notifySEClass .SBStatePopup { display: table; height: 100%; } .notifySEClass .SBStatePopupHide { display: none; height: 100%; } .SBStateImageContainer { display: table-cell; vertical-align: middle; text-align: center; } .notifySEClass .SBStatePopup .SBStateImageContainer, .notifySEClass .SBStatePopupHide .SBStateImageContainer { width:50px; } .notifySEClass .SBStateImageContainer img { width:30px; /*height:30px;*/ } .notifySEClass .SBStateTextContainer { /*float:left;*/ color:#4C4C4C; line-height: 20px; margin-top: 2px; vertical-align: middle; display: table-cell; } .notifySEClass .SBStateTextContainer .SBStatePopupClose { position: absolute; top: 5px; right: 5px; width:18px; height:18px; float:tight; background: url(https://web.archive.org/web/20181004174617im_/chrome-extension://gngocbkfmikdgphklgmmehbjjlfgdemm/img/pops/close.svg) no-repeat center; cursor: pointer; } .notifySEClass .SBStateTextContainer .SBStateTextElement { font-size: 12px; font-weight: bold; } .notifySEClass .SBStateTextContainer #clickViewText { font-size: 12px; }  .notifySEClass .SBStateTextContainer .clickViewAllLink { font-size: 12px;text-decoration: underline;cursor: pointer;position: absolute;bottom: 2px;right: 40px; } .sbNotifViewMore { position: absolute; bottom: 5px; right: 5px; font-size: 12px; line-height: 17px;  } .sbNotifViewMoreNext, .sbNotifViewMorePrev { background: 0; display: inline-block; cursor: pointer; outline: none; color: #2388af; font-weight: bold;width: 0;height: 0;border-style: solid;border-width: 5px 0 5px 6px; border-color: transparent transparent transparent #69B8D6; line-height: 12px; vertical-align: middle; margin-left: 5px;} .sbNotifViewMorePrev { border-width: 5px 6px 5px 0; border-color: transparent #69B8D6 transparent transparent; margin-left: 0; margin-right: 5px; } .sbNotifViewMorePrev:hover { border-color: transparent #5cacca transparent transparent;} .sbNotifViewMoreNext:hover { border-color: transparent transparent transparent #5cacca;} .sbNotifViewMoreDisabled, .sbNotifViewMoreDisabled:hover, .sbNotifViewMoreDisabled2, .sbNotifViewMoreDisabled2:hover { cursor: default; opacity: .5; } </style></head>
+<body class="page-action-videomaker" style=""><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+  /*min-width:800px !important;*/
+}
+</style>
+<div id="wm-ipp-base" lang="en" style="display: block; direction: ltr;">
+</div><script type="text/javascript">
+__wm.bt(625,27,25,2,"web","http://vyondhoster.000webhostapp.com/videomaker.html","20181004174617",1996,"/_static/",["/_static/css/banner-styles.css?v=HyR5oymJ","/_static/css/iconochive.css?v=qtvMKcIJ"]);
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+<script type="text/javascript">
+if (self !== top) {
+            jQuery('body').hide();
+    }
+</script>
+
+<nav class="navbar site-nav" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            <a class="navbar-brand" href="/html/list.html" title="GoAnimate for Schools Remastered">
+                <img alt="GoAnimate for Schools" src="themelistfiles/logo4s.png">
+            </a>
+        </div>
+
+        <ul class="nav site-nav-alert-nav hidden-xs">
+            <li>
+                <a href="https://web.archive.org/web/20181004174617/http://vyondhoster.000webhostapp.com/messages" title="Messages"><span class="glyphicon glyphicon-envelope"></span><span class="count"></span></a>
+            </li>
+            <li>
+                <a href="https://web.archive.org/web/20181004174617/http://vyondhoster.000webhostapp.com/notifications" title="Notifications"><span class="glyphicon glyphicon-bell"></span><span class="count"></span></a>
+            </li>
+        </ul>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav navbar-right">
+
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="themelist.html" data-toggle="dropdown">Your Account <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://web.archive.org/web/20181004174617/http://vyondhoster.000webhostapp.com/student">Dashboard</a></li>
+                        <li><a href="https://web.archive.org/web/20181004174617/http://vyondhoster.000webhostapp.com/movies">Your Videos</a></li>
+                        <li class="divider"></li>
+                        <li><a href="https://web.archive.org/web/20181004174617/http://vyondhoster.000webhostapp.com/account">Account Settings</a></li>
+                        <li><a href="https://web.archive.org/web/20181004174617/http://vyondhoster.000webhostapp.com/profile/00lbzOKBnEro">Your Profile</a></li>
+                        <li class="divider"></li>
+                        <li><a class="logout-link" href="https://web.archive.org/web/20181004174617/http://vyondhoster.000webhostapp.com/logoff">Logout</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="themelist.html" data-toggle="dropdown">Explore <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://web.archive.org/web/20181004174617/http://vyondhoster.000webhostapp.com/students">Students</a></li>
+                        <li><a href="https://web.archive.org/web/20181004174617/http://vyondhoster.000webhostapp.com/teachers">Teachers</a></li>
+                        <li><a href="https://web.archive.org/web/20181004174617/http://vyondhoster.000webhostapp.com/videos">Videos</a></li>
+                        <li class="divider"></li>
+                        <li><a href="https://web.archive.org/web/20181004174617/https://blog.goanimate4schools.com/">Educator Experiences</a></li>
+                        <li><a href="https://web.archive.org/web/20181004174617/http://vyondhoster.000webhostapp.com/public_faq">FAQ</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="hidden-sm hidden-md hidden-lg" href="https://web.archive.org/web/20181004174617/http://vyondhoster.000webhostapp.com/create">Make a Video</a>
+                    <span class="site-nav-btn hidden-xs"><a class="btn btn-green" href="/html/lvm.html">Make a Video</a>
+<a class="btn btn-green" href="https://discord.gg/FjMMyXn">Discord</a></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="create-header">
+        <h1 class="h3">Select a Character Creator</h1>
+    </div>
+
+    <div class="themes row" id="themes">
+        <div class="col-sm-6 col-md-4 col-lg-4">
+        <div class="theme" id="thm-business">
+            <div class="theme-cell">
+                <div class="theme-cover launch">
+                    <img src="themelistfiles/img_top_cw.jpg" alt="Business Friendly">
+                </div>
+                <div class="theme-meat">
+                    <h3>Business Friendly</h3>
+                    <div class="apps">
+                        
+                        
+                        <a class="btn btn-default" href="/html/charlist/bfcchtml.html" title="" data-original-title="Character Creator"><i class="i-cc"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-4">
+        <div class="theme" id="thm-whiteboard">
+            <div class="theme-cell">
+                <div class="theme-cover launch">
+                    <img src="themelistfiles/WhiteboardAnimation.jpg" alt="Whiteboard Animation">
+                </div>
+                <div class="theme-meat">
+                    <h3>Whiteboard Animation</h3>
+                    <div class="apps">
+                        
+                        <a class="btn btn-default" href="/html/charlist/wbancchtml.html" title="" data-original-title="Character Creator"><i class="i-cc"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-4">
+        <div class="theme" id="thm-infographics">
+            <div class="theme-cell">
+                <div class="theme-cover launch">
+                    <img src="themelistfiles/infographics.jpg" alt="Video Infographics">
+                </div>
+                <div class="theme-meat">
+                    <h3>Video Infographics</h3>
+                    <div class="apps">
+                        <a class="btn btn-default" href="https://web.archive.org/web/20181004174617/https://goanimate4schools.com/character_creator/whiteboard" title="" data-original-title="Character Creator"><i class="i-cc"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    </div><div class="themes row" id="themes">
+        <div class="col-sm-6 col-md-4 col-lg-4">
+        <div class="theme" id="thm-business">
+            <div class="theme-cell">
+                <div class="theme-cover launch">
+                    <img src="themelistfiles/Comedy_World.jpg" alt="Business Friendly">
+                </div>
+                <div class="theme-meat">
+                    <h3>Comedy World</h3>
+                    <div class="apps">
+                        
+                        
+                        <a class="btn btn-default" href="/html/charlist/cwcchtml.html" title="" data-original-title="Character Creator"><i class="i-cc"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-4">
+        <div class="theme" id="thm-whiteboard">
+            <div class="theme-cell">
+                <div class="theme-cover launch">
+                    <img src="themelistfiles/Lil_Peepz.jpg" alt="Whiteboard Animation">
+                </div>
+                <div class="theme-meat">
+                    <h3>Lil' Peepz</h3>
+                    <div class="apps">
+                        
+                        <a class="btn btn-default" href="/html/charcreator/cc2.html" title="" data-original-title="Character Creator"><i class="i-cc"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-4">
+        <div class="theme" id="thm-whiteboard">
+            <div class="theme-cell">
+                <div class="theme-cover launch">
+                    <img src="themelistfiles/Toon_Adventure.jpg" alt="Whiteboard Animation">
+                </div>
+                <div class="theme-meat">
+                    <h3>Toon Adventure</h3>
+                    <div class="apps">
+                        
+                        <a class="btn btn-default" href="/html/charcreator/cctoon.html" title="" data-original-title="Character Creator"><i class="i-cc"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    </div><div class="themes row" id="themes">
+        <div class="col-sm-6 col-md-4 col-lg-4">
+        <div class="theme" id="thm-business">
+            <div class="theme-cell">
+                <div class="theme-cover launch">
+                    <img src="themelistfiles/Anime.jpg" alt="Business Friendly">
+                </div>
+                <div class="theme-meat">
+                    <h3>Anime</h3>
+                    <div class="apps">
+                        
+                        
+                        <a class="btn btn-default" href="/html/charlist/animecchtml.html" title="" data-original-title="Character Creator"><i class="i-cc"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-4">
+        <div class="theme" id="thm-whiteboard">
+            <div class="theme-cell">
+                <div class="theme-cover launch">
+                    <img src="themelistfiles/Ninja_Anime.jpg" alt="Whiteboard Animation">
+                </div>
+                <div class="theme-meat">
+                    <h3>Ninja Anime</h3>
+                    <div class="apps">
+                        
+                        <a class="btn btn-default" href="/html/charlist/ninanicchtml.html" title="" data-original-title="Character Creator"><i class="i-cc"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-4">
+        <div class="theme" id="thm-infographics">
+            <div class="theme-cell">
+                <div class="theme-cover launch">
+                    <img src="themelistfiles/Chibi_Peepz.jpg" alt="Video Infographics">
+                </div>
+                <div class="theme-meat">
+                    <h3>Chibi Peepz</h3>
+                    <div class="apps">
+                                                                       <a class="btn btn-default" href="http://localhost/html/charcreator/chibi.html" title="" data-original-title="Character Creator"><i class="i-cc"></i></a>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    </div><div class="themes row" id="themes">
+        <div class="col-sm-6 col-md-4 col-lg-4">
+        <div class="theme" id="thm-infographics">
+            <div class="theme-cell">
+                <div class="theme-cover launch">
+                    <img src="themelistfiles/Chibi_Ninjas.jpg" alt="Video Infographics">
+                </div>
+                <div class="theme-meat">
+                    <h3>Chibi Ninjas</h3>
+                    <div class="apps">
+                                                                       <a class="btn btn-default" href="/html/charcreator/chibininjas.html" title="" data-original-title="Character Creator"><i class="i-cc"></i></a>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+<div class="col-sm-6 col-md-4 col-lg-4">
+        <div class="theme" id="thm-whiteboard">
+            <div class="theme-cell">
+                <div class="theme-cover launch">
+                    <img src="themelistfiles/BOTDF.jpg" alt="Whiteboard Animation">
+                </div>
+                <div class="theme-meat">
+                    <h3>Blood on The Dance Floor Remastered</h3>
+                    <div class="apps">
+                        
+                        <a class="btn btn-default" href="/html/charcreator/botdf.html" title="" data-original-title="Character Creator"><i class="i-cc"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        
+
+        
+
+
+    </div>
+</div>
+
+<script src="themelistfiles/video_maker.js.gz.js"></script>
+
+<footer class="site-footer hidden-print">
+    <div class="container">
+        <div class="row site-footer-nav">
+            <div class="col-sm-3">
+                <div class="site-footer-nav-col">
+                    <h5>About GoAnimate</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://web.archive.org/web/20181004174617/https://goanimate.com/about">Who We Are</a></li>
+                        <li><a href="https://web.archive.org/web/20181004174617/https://goanimate.com/contactus">Contact Us</a></li>
+                        <li><a href="https://web.archive.org/web/20181004174617/https://goanimate.com/video-maker-tips">Blog</a></li>
+                        <li><a href="https://web.archive.org/web/20181004174617/https://press.goanimate.com/">Press</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="site-footer-nav-col">
+                    <h5>GoAnimate Solutions</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://web.archive.org/web/20181004174617/https://goanimate4schools.com/" target="_blank">GoAnimate for Schools</a></li>
+                        <li class="hidden-xs">&nbsp;</li>
+                        <li class="hidden-xs">&nbsp;</li>
+                        <li class="hidden-xs">&nbsp;</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="site-footer-nav-col">
+                    <h5>Usage Guidelines</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://web.archive.org/web/20181004174617/http://vyondhoster.000webhostapp.com/termsofuse">Terms of Service</a></li>
+                        <li><a href="https://web.archive.org/web/20181004174617/http://vyondhoster.000webhostapp.com/privacy">Privacy Policy</a></li>
+                        <li class="hidden-xs">&nbsp;</li>
+                        <li class="hidden-xs">&nbsp;</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="site-footer-nav-col">
+                    <h5>Getting Help</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://web.archive.org/web/20181004174617/https://blog.goanimate4schools.com/">Educator Experiences</a></li>
+                        <li><a href="https://web.archive.org/web/20181004174617/https://goanimate4schools.zendesk.com/hc/en-us">Help Center</a></li>
+                        <li class="hidden-xs">&nbsp;</li>
+                        <li class="hidden-xs">&nbsp;</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row site-footer-copyright">
+            <div class="col-sm-6">
+                <div class="site-footer-socials-container">
+                    Follow us on:
+                    <ul class="site-footer-socials clearfix">
+                        <li><a class="facebook" href="https://web.archive.org/web/20181004174617/https://www.facebook.com/GoAnimateInc">Facebook</a></li>
+                        <li><a class="twitter" href="https://web.archive.org/web/20181004174617/https://twitter.com/Go4Schools">Twitter</a></li>
+                        <li><a class="linkedin" href="https://web.archive.org/web/20181004174617/https://www.linkedin.com/company/goanimate">Linked In</a></li>
+                        <li><a class="gplus" href="https://web.archive.org/web/20181004174617/https://plus.google.com/+goanimate">Google+</a></li>
+                        <li><a class="youtube" href="https://web.archive.org/web/20181004174617/https://www.youtube.com/user/GoAnimate">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="pull-right">
+                    <img src="themelistfiles/logo_amazon.png" alt="AWS Partner Network">
+                    &nbsp;&nbsp;&nbsp;
+                    GoAnimate © 2020
+                </div>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+
+
+
+
+
+<loom-container id="lo-engage-ext-container"><loom-shadow data-reactroot="" classname="resolved"></loom-shadow></loom-container>
+</body></html>

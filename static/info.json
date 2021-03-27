@@ -122,6 +122,11 @@
 				"Content-Type": "text/html; charset=UTF-8"
 			}
 		},
+        "html/(.*)": {
+			"headers": {
+				"Content-Type": "text/html; charset=UTF-8"
+			}
+		},
 		"pages/css/(.*)": {
 			"headers": {
 				"Content-Type": "text/css; charset=UTF-8"
